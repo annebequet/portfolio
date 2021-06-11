@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anne Bequet</title>
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
 <body>
-    <h1>Hello sunshine</h1>
-    <p>want a cool website ?</p>
 
-    <div class="pictures-to-move">
+    <!-- navigation -->
+    <!-- * data-link attribut will allowto change the view-->
+    <nav class="nav">
+        <a href="/" class="nav__link" data-link>About</a>
+        <a href="/projects" class="nav__link" data-link>Projects</a>
+        <a href="/contact" class="nav__link" data-link>Contact</a>
+    </nav>
 
-        <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LstWy2evcpnrOb-YZ4dH5diX3cQzwQOBGQ&usqp=CAU" alt="mountain photo" class="pictures-to-move__collection" id="pictures-to-move__1" />
+    <!-- container for our components -->
+    <div id="app"></div>
 
-        <img src="https://lh3.googleusercontent.com/proxy/9Nfqnm8qx5b3l5eL2r5IFel9z-Kl14UmI9V5zno0j9Zjlyy4dJ7sxsRXoLIZINwcnVRTzJyzjLnuA4wVccjHlqFyGs7NKP2Th_mQVzGpOlpxNDgj08suBpz3eEkFAsW048CZervIPYF0yBPicoF_9rgTdHge0QdWIWFFXkB3bw" alt="mountain photo" class="pictures-to-move__collection"  id="pictures-to-move__2" />
-
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT52ulEMl663AQ5ec_x99_BCKIsC_CzpulP5g&usqp=CAU" alt="mountain photo" class="pictures-to-move__collection"   id="pictures-to-move__4"/>
-    </div>
+    <script type="module" src="/static/js/index.js"></script>
+  
     
-    <script src="website.js"></script> 
-
 </body>
 </html> 
