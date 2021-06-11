@@ -1,15 +1,36 @@
 // JS entry point that handles our router
+import About from "./views/About.js";
+import Projects from "./views/Projects.js";
+import Contact from "./views/Contact.js";
 
 // regex that will convert the route 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
+
+const getParams = match => {
+    const values = match.result.slice(1);
+    const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
+
+    return Object.fromEntries(keys.map((key, i) => {
+        return [key, values[i]];
+    }));
+};
 
 // ************************ router ***********************
 
 const router = async () => {
     const routes = [
-        { path: "/" },
-        { path: "/about" },
-        { path: "/projects" },
+        { 
+            path: "/",
+            view: About,
+        },
+        { 
+            path: "/projects/:id",
+            view: Projects,
+        },
+        { 
+            path: "/contact",
+            view: Contact,
+        },
     ];
     
     // test each route to find a match, stored in the variale 'result'. 
@@ -29,9 +50,17 @@ const router = async () => {
             result: [location.pathname]
         };
     }
-
     console.log(match)
+
+    //Append the correct view to the div 'app'.
+    
+    const view = new match.route.view(getParams(match));
+    console.log(view)
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
 }
+
+window.addEventListener('popstate', router)
 
 // *********************** Navigation *************************
 
@@ -52,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     router();
 });
 
-window.addEventListener('popstate', router)
 
 
 
