@@ -1,6 +1,6 @@
 // JS entry point that handles our router
 import About from "./views/About.js";
-import Projects from "./views/Projects.js";
+import Project from "./views/Project.js";
 import Contact from "./views/Contact.js";
 
 // regex that will convert the route 
@@ -24,8 +24,8 @@ const router = async () => {
             view: About,
         },
         { 
-            path: "/projects/:id",
-            view: Projects,
+            path: "/project/:id",
+            view: Project,
         },
         { 
             path: "/contact",
@@ -50,12 +50,10 @@ const router = async () => {
             result: [location.pathname]
         };
     }
-    console.log(match)
 
     //Append the correct view to the div 'app'.
     
     const view = new match.route.view(getParams(match));
-    console.log(view)
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 }

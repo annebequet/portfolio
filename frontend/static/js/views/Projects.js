@@ -5,12 +5,12 @@ export default class extends AbstractView {
         super(params);
         this.setTitle("Projects");
     }
-
+    
     async getHtml() {
         return `
-            <div class="projects">
-                <h1>Detailed project</h1>
-            </div>
+            <a href="/project/${this.params.id}" class="nav__link" data-link class="pictures-to-move__collection" id="pictures-to-move__${this.params.id}">
+                <img src= "${this.params.img}" alt="${this.params.name}"/>
+             </a>
         `;
     }
 }
