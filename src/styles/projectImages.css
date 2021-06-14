@@ -1,4 +1,4 @@
-#pictures-to-move__collection {
+.pictures-to-move__collection {
     opacity: 0.3;
     transition: all 1s;
     -webkit-transition: all 1s;

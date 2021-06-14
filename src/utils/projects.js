@@ -1,26 +1,27 @@
-const projectsAnimation = {   
+export const projectsAnimation = {   
     
     // Two animations : 
         // 1. on mouseover, the image gains a higher opacity. Reversible on mouseleave
         // 1. On click and mousemove, possibility to drag and drop the image
     
     init: function () {
-        const pictures = document.querySelectorAll('.movablePictures');   
+        const pictures = document.querySelectorAll('.pictures-to-move__collection');
         pictures.forEach(picture => 
-            picture.addEventListener('mousedown', app.movePicture),
+            picture.addEventListener('mousedown', projectsAnimation.movePicture),
         );
 
         pictures.forEach(picture => 
-            picture.addEventListener('mouseover', app.changeOpacity),
+            picture.addEventListener('mouseover', projectsAnimation.changeOpacity),
         );        
         pictures.forEach(picture => 
-            picture.addEventListener('mouseleave', app.changeOpacity),
+            picture.addEventListener('mouseleave', projectsAnimation.changeOpacity),
         );
     },
 
     changeOpacity: function (event) {
         //We retrieve the id name
         const pictureSelected = event.currentTarget.id;
+        console.log(pictureSelected);
         document.querySelector(`#${pictureSelected}`).classList.toggle(`opacity`);
     },
     
@@ -66,4 +67,3 @@ const projectsAnimation = {
     },
 }
 
-projectsAnimation.init();

@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
- "mode": "production",
-"entry": "./src/static/js/index.js",
+ "mode": "development",
+"entry": "./src/app.js",
 
  "output": {
    "path": __dirname + '/dist',
@@ -19,6 +19,10 @@ module.exports = {
          "style-loader",
          "css-loader"
        ]
+     },
+     {
+       "test": /\.(jpe?g|png|gif|svg)$/i, 
+       "use": "file-loader?name=app/images/[name].[ext]"
      },
      {
        "test": /\.js$/,

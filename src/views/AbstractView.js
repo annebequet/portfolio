@@ -1,4 +1,4 @@
-// frontend/static/js/views/AbstractView.js
+// frontend/src/views/AbstractView.js
 export default class {
     constructor(params) {
         this.params = params;

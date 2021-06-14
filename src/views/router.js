@@ -1,35 +1,44 @@
 // JS entry point that handles our router
-import About from "./views/About.js";
-import Project from "./views/Project.js";
-import Contact from "./views/Contact.js";
+import About from "./About.js";
+import Project from "./Project.js";
+import Contact from "./Contact.js";
 
-// regex that will convert the route 
-const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
+//helpers
 
-const getParams = match => {
-    const values = match.result.slice(1);
-    const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
+import { helper } from "../utils/helper.js";
 
-    return Object.fromEntries(keys.map((key, i) => {
-        return [key, values[i]];
-    }));
-};
+
 
 // ************************ router ***********************
 
-const router = async () => {
+export const router = async () => {
+        // regex that will convert the route 
+    const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
+
+    const getParams = match => {
+        const values = match.result.slice(1);
+        const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
+
+        return Object.fromEntries(keys.map((key, i) => {
+            return [key, values[i]];
+        }));
+    };
+
     const routes = [
         { 
             path: "/",
             view: About,
+            name:'About',
         },
         { 
             path: "/project/:id",
             view: Project,
+            nape:'Project',
         },
         { 
             path: "/contact",
             view: Contact,
+            name:"Contact",
         },
     ];
     
@@ -56,9 +65,11 @@ const router = async () => {
     const view = new match.route.view(getParams(match));
 
     document.querySelector("#app").innerHTML = await view.getHtml();
+
+    // When the modules are loaded, we load the helpers needed for that view
+    helper(match.route.name);
 }
 
-window.addEventListener('popstate', router)
 
 // *********************** Navigation *************************
 
@@ -67,7 +78,7 @@ const navigateTo = url => {
     router();
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+export const navigate = () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
@@ -77,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Document has loaded -  run the router! */
     router();
-});
+}
+
+
 
 
 

@@ -3,10 +3,10 @@ const path = require("path");
 
 const app = express();
 
-/* Ensure any requests prefixed with /static will serve our "frontend/static" directory */
-app.use("/static", express.static(path.resolve(__dirname, "src", "static")));
+/* Ensure any requests prefixed with /src will serve our "frontend/src" directory */
+app.use("/src", express.static(path.resolve(__dirname, "src")));
 
-/* Redirect all routes to our (soon to exist) "index.html" file */
+/* Redirect all routes to our "index.html" file */
 app.get("/*", (req, res) => {
     res.sendFile(path.resolve("src", "index.html"));
 });

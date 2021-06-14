@@ -1,4 +1,4 @@
-import AbstractView from "./AbstractView.js";
+import AbstractView from "../AbstractView.js";
 
 export default class extends AbstractView {
     constructor(params) {
@@ -8,7 +8,8 @@ export default class extends AbstractView {
     
     async getHtml() {
         return `
-            <a href="/project/${this.params.id}" class="nav__link" data-link class="pictures-to-move__collection" id="pictures-to-move__${this.params.id}">
+            <div id="pictures-to-move__${this.params.id}" class="pictures-to-move__collection" >
+            <a href="/project/${this.params.id}" class="nav__link" data-link>
                 <img src= "${this.params.img}" alt="${this.params.name}"/>
              </a>
         `;

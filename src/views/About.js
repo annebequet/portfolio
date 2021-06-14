@@ -1,7 +1,6 @@
 import AbstractView from "./AbstractView.js";
-import Projects from "./Projects.js";
-
-import dataProjects from "../../data/data-projects.js";
+import Projects from "./components/ProjectImage.js";
+import dataProjects from "../data/data-projects.js";
 
 export default class extends AbstractView {
     constructor(params) {
