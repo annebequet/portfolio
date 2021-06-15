@@ -8,7 +8,7 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/project/:id",
         "destination": "/index.html"
       }
     ]
