@@ -14,7 +14,6 @@ import { getParams } from "../helper/navigation.js";
 // ************************ router ***********************
 
 export const router = async () => {
-    console.log(window.location)
     const routes = [
         { 
             path: "/",
