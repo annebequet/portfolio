@@ -3,9 +3,10 @@
 const dataProjects = [
     {
         id: 1,
-        name: 'montagne',
+        name: 'burgermaze',
         img: 'https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/1/1/a/11a3b884f1_50170595_alpes-elevation.jpg',
         description: 'Qui sit enim veniam et nisi reprehenderit proident. Exercitation sit qui quis sit labore sint aute ipsum mollit. Qui cupidatat do quis sint et minim dolore ipsum amet deserunt deserunt ad quis sunt. Duis fugiat proident ex adipisicing amet dolore esse.',
+        link: 'https://burgermaze-70016.web.app/',
     },
     {
         id: 2,
