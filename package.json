@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "git@github.com:annebequet/portfolio.git",
+  "homepage": "https://github.com/annebequet/portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
