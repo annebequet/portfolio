@@ -10,6 +10,10 @@
       {
         "source": "/project/:id",
         "destination": "/index.html"
+      },
+      {
+        "source": "/contact",
+        "destination": "/index.html"
       }
     ]
   }
