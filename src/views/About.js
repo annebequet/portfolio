@@ -28,7 +28,7 @@ export default class extends AbstractView {
 
         return `
             <div id="about">
-                <h1>Hi, it's Anne</h1>
+                <h1>Hi, it's Anne !</h1>
                 <p>A front-end developer</p>
                 <div id="pictures-to-move">
                     ${projectsList.map((projectInfos) => {
