@@ -1,15 +1,15 @@
 const path = require('path');
 
 module.exports = {
- "mode": "development",
+ "mode": "production",
 "entry": "./src/app.js",
 
  "output": {
-   "path": __dirname + '/dist',
+   "path": __dirname + '/build',
    "filename": "main.js"
  },
  devServer: {
-   contentBase: path.join(__dirname, 'dist')
+   contentBase: path.join(__dirname, 'build')
  },
  "module": {
    "rules": [
