@@ -5,11 +5,11 @@ module.exports = {
 "entry": "./src/app.js",
 
  "output": {
-   "path": __dirname + '/build',
+   "path": __dirname + '/docs',
    "filename": "main.js"
  },
  devServer: {
-   contentBase: path.join(__dirname, 'build')
+   contentBase: path.join(__dirname, 'docs')
  },
  "module": {
    "rules": [
