@@ -2,11 +2,13 @@ export const projectsAnimation = {
     
     // Two animations : 
         // 1. on mouseover, the image gains a higher opacity. Reversible on mouseleave
-        // 1. On click and mousemove, possibility to drag and drop the image
+        // 1. On click and mousemove, possibility to drag and drop the div parent of the image
     
     init: function () {
         const pictures = document.querySelectorAll('.pictures-to-move__collection');
-        pictures.forEach(picture => 
+        const picturesContainer = document.querySelectorAll('.picture-container');
+
+        picturesContainer.forEach(picture => 
             picture.addEventListener('mousedown', projectsAnimation.movePicture),
         );
 
@@ -21,7 +23,6 @@ export const projectsAnimation = {
     changeOpacity: function (event) {
         //We retrieve the id name
         const pictureSelected = event.currentTarget.id;
-        console.log(pictureSelected);
         document.querySelector(`#${pictureSelected}`).classList.toggle(`opacity`);
     },
     

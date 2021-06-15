@@ -10,20 +10,38 @@
     -webkit-transition: all 1s;
 }
 
-#pictures-to-move__1 {
+#picture-container__1 {
     position: absolute;
     top: 30px;
-    left: 1200px;
+    left: 300px;
 }
 
-#pictures-to-move__2 {
+#picture-container__1 img {
+    left: 1200px;
+    width: 100px;
+    height: 100px;
+}
+
+#picture-container__2 {
     position: absolute;
     top: 170px;
+    left: 70px;
+}
+
+#picture-container__2 img {
+    right: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+#picture-container__3 {
+    position: absolute;
+    top: 250px;
     right: 200px;
 }
 
-#pictures-to-move__3 {
-    position: absolute;
-    top: 250Px;
-    left: 350px;    
+#picture-container__3 img {
+    left: 350px;  
+    width: 100px;
+    height: 100px;  
 }

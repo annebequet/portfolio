@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^5.2.6",
-    "express": "^4.17.1",
     "style-loader": "^2.0.0"
   },
   "devDependencies": {

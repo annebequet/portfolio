@@ -5,25 +5,15 @@ import Contact from "./Contact.js";
 
 //helpers
 
-import { helper } from "../utils/helper.js";
+import { helper } from "../utils/index.js";
+import { pathToRegex } from "../helper/navigation.js";
+import { getParams } from "../helper/navigation.js";
 
 
 
 // ************************ router ***********************
 
 export const router = async () => {
-        // regex that will convert the route 
-    const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-
-    const getParams = match => {
-        const values = match.result.slice(1);
-        const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(result => result[1]);
-
-        return Object.fromEntries(keys.map((key, i) => {
-            return [key, values[i]];
-        }));
-    };
-
     const routes = [
         { 
             path: "/",
@@ -33,7 +23,7 @@ export const router = async () => {
         { 
             path: "/project/:id",
             view: Project,
-            nape:'Project',
+            name:'Project',
         },
         { 
             path: "/contact",
@@ -79,13 +69,13 @@ const navigateTo = url => {
 };
 
 export const navigate = () => {
-    document.body.addEventListener("click", e => {
+    //using bubbling by attaching to the node parent the event listener, so that if a nav element is added later, the event will still apply
+    document.body.addEventListener("click", function(e) {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
             navigateTo(e.target.href);
         }
-    });
-
+    })
     /* Document has loaded -  run the router! */
     router();
 }
