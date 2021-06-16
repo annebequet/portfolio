@@ -28,22 +28,22 @@
 #picture-container__1 {
     position: absolute;
     left: 47.5vw;
-    top: 1.875vw;
-    width: 900px;
+    top: 15vw;
+    width: 60%;
 }
 
 #picture-container__2 {
     position: absolute;    
-    left: 18.681vw;
-    top: 26.323vw;
-    width: 300px;
+    left: 17vw;
+    top: 35vw;
+    width: 30%;
 }
 
 #picture-container__3 {
     position: absolute;
-    width: 500px;
+    top: 55vw;
     left: 40vw;
-    top: 37vw;
+    width: 40%;
 }
 
 

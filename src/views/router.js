@@ -8,6 +8,7 @@ import Contact from "./Contact.js";
 import { helper } from "../utils/index.js";
 import { pathToRegex } from "../helper/navigation.js";
 import { getParams } from "../helper/navigation.js";
+import { activeNavBar} from "../helper/navigation.js";
 
 
 
@@ -58,6 +59,8 @@ export const router = async () => {
 
     // When the modules are loaded, we load the helpers needed for that view
     helper(match.route.name);
+    
+    activeNavBar();      
 }
 
 
@@ -75,7 +78,7 @@ export const navigate = () => {
             e.preventDefault();
             navigateTo(e.target.href);
         }
-    })
+    })    
     /* Document has loaded -  run the router! */
     router();
 }

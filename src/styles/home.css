@@ -31,6 +31,10 @@ body {
     display: inline-block;
 }
 
+#nav .active {
+    opacity: 1;
+}
+
 #nav a:hover {
     text-decoration: none;
     transition: opacity .3s ease;
