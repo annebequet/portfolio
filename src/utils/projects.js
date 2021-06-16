@@ -41,8 +41,6 @@ export const projectsAnimation = {
 
         // move it out of any current parents directly into body
         // to make it positioned relative to the body
-        document.body.append(picture);
-        moveAt(event.pageX, event.pageY);
 
         function moveAt(pageX, pageY) {
             picture.style.left = pageX - shiftX + 'px';
@@ -62,6 +60,7 @@ export const projectsAnimation = {
 
         function onMouseUp(event) {  
             isMouseDown = false;
+            const parentElement = document.querySelector("#pictures-to-move");
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener('mouseup', onMouseUp);
             document.removeEventListener('mousedown', onMouseDown);
