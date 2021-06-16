@@ -9,9 +9,11 @@
     letter-spacing: .015em;
     line-height: 1.2em;
     margin-top: 1.5em;
+    margin-bottom: 0;
 }
 
 #about-me p {
     opacity: var(--opacity);
     font-size: var(--font-size-big-screen);
+    margin: 0;
 }

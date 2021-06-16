@@ -2,18 +2,32 @@ export const projectsAnimation = {
     
     // One animation : 
         // 1. On click and mousemove, possibility to drag and drop the div parent of the image
+        // 2. On mouseover, opacity changes
     
     init: function () {
-        const pictures = document.querySelectorAll('.pictures-to-move__collection');
         const picturesContainer = document.querySelectorAll('.picture-container');
 
         picturesContainer.forEach((picture) => {
             picture.addEventListener('mousedown', projectsAnimation.movePicture);
+            // deactivate browser API drag and drop
             picture.ondragstart = function() {
                 return false;
             };
         });
 
+        this.launchOpacityListener();        
+    },
+
+    changeOpacity: function (event) {
+        //We retrieve the id name
+        const pictureSelected = event.currentTarget.id;
+        document.querySelector(`#${pictureSelected}`).classList.toggle(`opacity`);
+
+        // We also change the opacity of the sibling div
+    },
+
+    launchOpacityListener: function (event) {
+        const pictures = document.querySelectorAll('.pictures-to-move__collection');
         pictures.forEach(picture => 
             picture.addEventListener('mouseover', projectsAnimation.changeOpacity),
         );        
@@ -22,14 +36,21 @@ export const projectsAnimation = {
         );
     },
 
-    changeOpacity: function (event) {
-        //We retrieve the id name
-        const pictureSelected = event.currentTarget.id;
-        document.querySelector(`#${pictureSelected}`).classList.toggle(`opacity`);
+    deleteOpacityListener: function (event) {
+        const pictures = document.querySelectorAll('.pictures-to-move__collection');
+        pictures.forEach(picture => 
+            picture.removeEventListener('mouseover', projectsAnimation.changeOpacity),
+        );        
+        pictures.forEach(picture => 
+            picture.removeEventListener('mouseleave', projectsAnimation.changeOpacity),
+        );
     },
     
     
-    movePicture: function (event) {   
+    movePicture: function (event) {  
+        // Remove the listeners for the opacity, so that the movement of our object won't trigger it on other pictures
+        projectsAnimation.deleteOpacityListener();
+
         const picture = document.querySelector(`#${event.currentTarget.id}`); 
 
         // New coordinates
@@ -38,9 +59,6 @@ export const projectsAnimation = {
 
         // Variable that will indicate if the user is still clicking while moving the picture
         let isMouseDown = false;
-
-        // move it out of any current parents directly into body
-        // to make it positioned relative to the body
 
         function moveAt(pageX, pageY) {
             picture.style.left = pageX - shiftX + 'px';
@@ -65,6 +83,9 @@ export const projectsAnimation = {
             document.removeEventListener('mouseup', onMouseUp);
             document.removeEventListener('mousedown', onMouseDown);
             picture.onmouseup = null;
+
+            //relaunch the opacity listener
+            projectsAnimation.launchOpacityListener();
         }
     
         // move the ball on mousemove and mousedown combined

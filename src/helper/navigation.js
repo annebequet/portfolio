@@ -21,13 +21,11 @@ export const getParamFromUrl = () => {
 export const activeNavBar = () => {
     // this will get the full URL at the address bar
     var url = window.location.href;
-    console.log(url)
 
     // passes on every "a" tag
     const navItems = document.querySelectorAll("#nav a")
     navItems.forEach((nav) => {
         // checks if its the same on the address bar
-        console.log(nav)
         if (url == (nav.href)) {
             nav.className ="active";
         }

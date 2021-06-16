@@ -16,6 +16,11 @@
     transition: all 1s;
     -webkit-transition: all 1s;
     filter: none;
+    z-index: 1;
+}
+
+.picture-container {
+    z-index: -1;
 }
 
 
@@ -81,13 +86,6 @@
     opacity: var(--opacity);
     position: relative;
     display: inline-block;
-}
-
-.picture-container__informations a:hover{
-    text-decoration: none;
-    transition: opacity .3s ease;
-    color: black;
-    opacity: 1;
 }
 
 .picture-container__informations a::after {
