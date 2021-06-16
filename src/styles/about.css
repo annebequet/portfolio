@@ -1,0 +1,17 @@
+#about-me {
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+}
+
+#about-me h1 {
+    font-size: var(--title-font-size-big-screen);
+    letter-spacing: .015em;
+    line-height: 1.2em;
+    margin-top: 1.5em;
+}
+
+#about-me p {
+    opacity: var(--opacity);
+    font-size: var(--font-size-big-screen);
+}

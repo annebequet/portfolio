@@ -1,16 +1,18 @@
 export const projectsAnimation = {   
     
-    // Two animations : 
-        // 1. on mouseover, the image gains a higher opacity. Reversible on mouseleave
+    // One animation : 
         // 1. On click and mousemove, possibility to drag and drop the div parent of the image
     
     init: function () {
         const pictures = document.querySelectorAll('.pictures-to-move__collection');
         const picturesContainer = document.querySelectorAll('.picture-container');
 
-        picturesContainer.forEach(picture => 
-            picture.addEventListener('mousedown', projectsAnimation.movePicture),
-        );
+        picturesContainer.forEach((picture) => {
+            picture.addEventListener('mousedown', projectsAnimation.movePicture);
+            picture.ondragstart = function() {
+                return false;
+            };
+        });
 
         pictures.forEach(picture => 
             picture.addEventListener('mouseover', projectsAnimation.changeOpacity),
@@ -26,6 +28,7 @@ export const projectsAnimation = {
         document.querySelector(`#${pictureSelected}`).classList.toggle(`opacity`);
     },
     
+    
     movePicture: function (event) {   
         const picture = document.querySelector(`#${event.currentTarget.id}`); 
 
@@ -35,6 +38,11 @@ export const projectsAnimation = {
 
         // Variable that will indicate if the user is still clicking while moving the picture
         let isMouseDown = false;
+
+        // move it out of any current parents directly into body
+        // to make it positioned relative to the body
+        document.body.append(picture);
+        moveAt(event.pageX, event.pageY);
 
         function moveAt(pageX, pageY) {
             picture.style.left = pageX - shiftX + 'px';

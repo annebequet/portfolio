@@ -28,8 +28,12 @@ export default class extends AbstractView {
 
         return `
             <div id="about">
-                <h1>Hi, it's Anne !</h1>
-                <p>A front-end developer</p>
+                
+                <div id="about-me">
+                    <h1>Hi, it's Anne</h1>
+                    <p>A front-end developer</p>
+                </div>
+
                 <div id="pictures-to-move">
                     ${projectsList.map((projectInfos) => {
                         // return the html of each project, minus the coma at the end (from the array)

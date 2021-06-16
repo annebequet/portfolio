@@ -6,23 +6,26 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack serve --open && npm run watch",
-    "develop": "webpack"
+    "develop": "webpack serve --open && npm run watch",
+    "build": "webpack serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "css-loader": "^5.2.6",
-    "gh-pages": "^3.2.1",
-    "style-loader": "^2.0.0"
+    "gh-pages": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "babel-loader": "^8.2.2",
-    "webpack": "^5.38.1",
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^1.6.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.39.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
