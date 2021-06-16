@@ -30,19 +30,19 @@
     position: absolute;
     left: 47.5vw;
     top: 1.875vw;
-    width: 60%;
+    width: 900px;
 }
 
 #picture-container__2 {
     position: absolute;    
     left: 18.681vw;
     top: 26.323vw;
-    width: 25%;
+    width: 300px;
 }
 
 #picture-container__3 {
     position: absolute;
-    width: 40%;
+    width: 500px;
     left: 40vw;
     top: 37vw;
 }
