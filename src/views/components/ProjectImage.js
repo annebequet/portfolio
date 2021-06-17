@@ -10,7 +10,7 @@ export default class extends AbstractView {
         return `
             <div class="picture-container" id="picture-container__${this.params.id}">
                 <img src= "${this.params.img}" alt="${this.params.name}" id="pictures-to-move__${this.params.id}" class="pictures-to-move__collection"/>
-                <div class="picture-container__informations">
+                <div class="picture-container__informations" id="picture-container__informations__${this.params.id}">
                     <h3>${this.params.name}</h3>
                     <p>${this.params.subtitle}</p>
                     <a href="/project/${this.params.id}" class="nav__link" data-link>
