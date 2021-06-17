@@ -24,6 +24,7 @@ export default class extends AbstractView {
                         <p class="project__description">${project.description}</p>
                     </div>
                     <div class="project__links">
+                        <h2>Links</h2>
                         <div class="project__links-subcontainer">
                             <a class="nav__link" target="_blank" href="${project.link}">Site</a>
                             <p class="animated-arrow">→</p>
