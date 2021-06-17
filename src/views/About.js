@@ -8,9 +8,17 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-            <div id="contact">
-                <h1>Anne who ?</h1>
+            <div id="about">
+                <div class="about-section">Anne who ?</div>
+                <div class="about-section">Cacahuète</div>
+                <div class="about-section">Blue sparkle</div>
+                <div class="about-section">Some like it hot</div>
+                <div class="about-section">Dance like a kitty</div>
             </div>
+            
+            <div id="scroll-bar"></div>
+            <div id="scroll-point"></div>
+            <div id="scroll-bar-2"></div>
         `;
     }
 }

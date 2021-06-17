@@ -54,6 +54,10 @@
     opacity: var(--opacity);
 }
 
+.picture-container__informations a{
+    color: var(--secondary-color);
+}
+
 .picture-container__informations p{
     margin: 0;
 }

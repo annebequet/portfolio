@@ -65,12 +65,12 @@
     width: 100%;
 }
 
-.project__links {
-    width: 100%;
+.project__links {    
+    width: fit-content;
     margin-top: 4em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .project__subcontainer {
@@ -79,10 +79,6 @@
 
 .animated-arrow{
     display: inline-block;
-}
-
-.project__links {
-    width: fit-content;
 }
 
 
@@ -102,12 +98,7 @@
     }
 
     .project__links {
-        margin-top: 0;
-        width: 30%;
-    }
-
-    .project__links a {
-        text-align: center;
+        margin: 0 auto;
     }
 
     .project__left {

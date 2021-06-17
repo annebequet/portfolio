@@ -65,7 +65,11 @@ export const router = async () => {
 
     // When the modules are loaded, we load the helpers needed for that view
     helper(match.route.name);
+
+    // scroll to the top of the page
+    window.scrollTo(0,0);
     
+    // Bold style on the active link of the navbar
     activeNavBar();      
 }
 

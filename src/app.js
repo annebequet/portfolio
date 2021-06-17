@@ -8,7 +8,8 @@ import "./styles/home.css";
 import "./styles/projectImages.css";
 import "./styles/about.css";
 import "./styles/project.css";
-import "./styles/about.css";
+import "./styles/projects.css";
+import "./styles/contact.css";
 
 document.addEventListener("DOMContentLoaded", navigate);
 // Suscribe router to changes of history
