@@ -16,7 +16,18 @@ export default class extends AbstractView {
         if (project !== undefined)
         return `
             <div id="project">
-                <h1>Detailed project ${project.id}</h1>
+                <h1>${project.name}</h1>
+                <img src= "${project.img}" alt="${project.name}" />
+                <div class="project__subcontainer">                
+                    <div class="project__left">
+                        <h2>About</h2>
+                        <p class="project__description">${project.description}</p>
+                    </div>
+                    <div class="project__links">
+                        <p><a class="nav__link" target="_blank" href="${project.link}">Site</a> →</p>
+                        <p><a class="nav__link" target="_blank" href="${project.git}">Git</a> →</p>
+                    </div>
+                </div>
             </div>
         `;
         else

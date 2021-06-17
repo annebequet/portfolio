@@ -63,30 +63,6 @@
     margin: 0 0 5px 0;
 }
 
-.picture-container__informations a{
-    text-decoration: none;
-    transition: opacity .3s ease;
-    opacity: var(--opacity);
-    position: relative;
-    display: inline-block;
-}
-
-.picture-container__informations a:hover{
-    text-decoration: none;
-    transition: opacity .3s ease;
-    opacity: 1;
-}
-
-.picture-container__informations a::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: #ccc;
-    display: block;
-    position: absolute;
-    bottom: 0;
-}
-
 .opacity {
     opacity: 0.9 !important;
     transition: all 1s;

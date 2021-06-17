@@ -27,9 +27,9 @@ export const activeNavBar = () => {
     navItems.forEach((nav) => {
         // checks if its the same on the address bar
         if (url == (nav.href)) {
-            nav.className ="active";
+            nav.className ="nav__link active";
         }
         else
-            nav.className= "";
+            nav.className= "nav__link";
     });
 };  
