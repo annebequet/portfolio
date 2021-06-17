@@ -4,8 +4,10 @@ import { projectsAnimation } from "./projects.js";
 
 export const helper = (view) => {
     switch (view) {
-        case 'About':
+        case 'Projects':
             projectsAnimation.init();
+            break;
+        case 'About':
             break;
         case 'Project':
             break;

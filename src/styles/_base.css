@@ -4,11 +4,11 @@
     --font-size-details: 0.8em;
     --title-font-size: 2em;
     --gap: 5vw;
+    --secondary-color: rgb(147,112,219)
 }
 
 @media screen and (min-width: 700px) {   
     :root {
-        --opacity: 0.6;
         --font-size : 1.5em;
         --font-size-details : 0.8em;
         --title-font-size : 2.5em;
@@ -18,7 +18,6 @@
 
 @media screen and (min-width: 990px) {   
     :root {
-        --opacity: 0.6;
         --font-size : 1.7em;
         --font-size-details : 0.8em;
         --title-font-size : 3em;
@@ -44,8 +43,8 @@
 .nav__link::after {
     content: "";
     width: 100%;
-    height: 1px;
-    background: #ccc;
+    height: 2px;
+    background: var(--secondary-color);
     display: block;
     position: absolute;
     bottom: 0;

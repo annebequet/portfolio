@@ -8,6 +8,7 @@ import "./styles/home.css";
 import "./styles/projectImages.css";
 import "./styles/about.css";
 import "./styles/project.css";
+import "./styles/about.css";
 
 document.addEventListener("DOMContentLoaded", navigate);
 // Suscribe router to changes of history

@@ -2,6 +2,7 @@
 import About from "./About.js";
 import Project from "./Project.js";
 import Contact from "./Contact.js";
+import Projects from "./Projects.js";
 
 //helpers
 
@@ -18,6 +19,11 @@ export const router = async () => {
     const routes = [
         { 
             path: "/",
+            view: Projects,
+            name:'Projects',
+        },
+        { 
+            path: "/about",
             view: About,
             name:'About',
         },
