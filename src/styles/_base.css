@@ -1,7 +1,27 @@
-:root  {   
+:root {
     --opacity: 0.6;
-    --font-size-big-screen: 1.6em;
-    --font-size-details-big-screen: 0.8em;
-    --title-font-size-big-screen: 3em;
-    --gap: 2em;
+    --font-size: 1.3em;
+    --font-size-details: 0.8em;
+    --title-font-size: 2em;
+    --gap: 5vw;
+}
+
+@media screen and (min-width: 700px) {   
+    :root {
+        --opacity: 0.6;
+        --font-size : 1.5em;
+        --font-size-details : 0.8em;
+        --title-font-size : 2.5em;
+        --gap: 2em;
+    }
+}
+
+@media screen and (min-width: 990px) {   
+    :root {
+        --opacity: 0.6;
+        --font-size : 1.7em;
+        --font-size-details : 0.8em;
+        --title-font-size : 3em;
+        --gap: 3em;
+    }
 }

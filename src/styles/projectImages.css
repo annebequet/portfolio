@@ -1,3 +1,11 @@
+#pictures-to-move {
+    height: 50em;
+}
+
+.picture-container {
+    position: absolute;
+}
+
 .pictures-to-move__collection {
     cursor: move;
     opacity: 0.3;
@@ -9,21 +17,18 @@
 
 
 #picture-container__1 {
-    position: absolute;
     left: 47.5vw;
     top: 15vw;
     width: 60%;
 }
 
-#picture-container__2 {
-    position: absolute;    
+#picture-container__2 {  
     left: 17vw;
     top: 35vw;
     width: 30%;
 }
 
 #picture-container__3 {
-    position: absolute;
     top: 55vw;
     left: 40vw;
     width: 40%;
@@ -39,8 +44,9 @@
 }
 
 .picture-container__informations{
-    font-size: var(--font-size-details-big-screen);
+    font-size: var(--font-size-details );
     opacity: 0;
+    padding-bottom: 1em;
 }
 
 .picture-container__informations p,
@@ -60,10 +66,15 @@
 .picture-container__informations a{
     text-decoration: none;
     transition: opacity .3s ease;
-    color: black;
     opacity: var(--opacity);
     position: relative;
     display: inline-block;
+}
+
+.picture-container__informations a:hover{
+    text-decoration: none;
+    transition: opacity .3s ease;
+    opacity: 1;
 }
 
 .picture-container__informations a::after {
@@ -81,4 +92,46 @@
     transition: all 1s;
     -webkit-transition: all 1s;
     filter: grayscale(50%) !important;
+}
+
+@media screen and (max-width: 990px) {   
+    #pictures-to-move {
+        height: auto;
+    }
+
+    .picture-container:nth-child(even) {
+        width: 90%;        
+        float: right !important;
+    } 
+
+    .picture-container:nth-child(odd) {
+        width: 90% !important;
+    } 
+
+    .picture-container:nth-child(5n-7) {
+        width: 100% !important;
+    } 
+
+    .pictures-to-move__collection:nth-child(5n-7){
+        width: 100%;
+    }
+
+    .picture-container {
+        position: relative;
+        top: auto!important;
+        left: auto!important;
+        filter: grayscale(100%)!important;
+        opacity: 1!important;
+        margin-bottom: 2em;
+    }
+
+    .picture-container img {
+        cursor: none;
+        opacity: 1!important;
+        width: 90%;
+    }
+
+    .picture-container div {
+        opacity: 1!important;
+    }
 }
