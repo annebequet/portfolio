@@ -37,7 +37,7 @@ body {
 }
 
 #app {    
-    padding: 7em var(--gap);
+    padding: 7em 0;
     /*position: relative;*/
     overflow: hidden;
 }

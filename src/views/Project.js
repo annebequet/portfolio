@@ -15,24 +15,32 @@ export default class extends AbstractView {
 
         if (project !== undefined)
         return `
-            <div id="project">
-                <h1>${project.name}</h1>
+            <div class="project">
+                <div class="project__header">
+                    <h1>${project.name}</h1>
+                    <h3>${project.subtitle}</h3>
+                </div>
+
                 <img src= "${project.img}" alt="${project.name}" />
+
                 <div class="project__subcontainer">                
-                    <div class="project__left">
-                        <h2>About</h2>
+                    <div class="project__top">
                         <p class="project__description">${project.description}</p>
+                        <ul class="project__technologies">
+                            ${project.technologies.map((techno) => `<li>[${techno}]</li>`).join('')}
+                        </ul>
                     </div>
+
                     <div class="project__links">
-                        <h2>Links</h2>
                         <div class="project__links-subcontainer">
-                            <a class="nav__link" target="_blank" href="${project.link}">Site</a>
+                            <a class="nav__link" target="_blank" href="${project.link}">site</a>
                             <p class="animated-arrow">→</p>
                         </div>
+
                         <div class="project__links-subcontainer">
-                            <a class="nav__link" target="_blank" href="${project.git}">Git</a>
+                            <a class="nav__link" target="_blank" href="${project.git}">git</a>
                             <p class="animated-arrow">→</p>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>

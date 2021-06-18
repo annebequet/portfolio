@@ -9,6 +9,7 @@ const dataProjects = [
         description: 'Qui sit enim veniam et nisi reprehenderit proident. Exercitation sit qui quis sit labore sint aute ipsum mollit. Qui cupidatat do quis sint et minim dolore ipsum amet deserunt deserunt ad quis sunt. Duis fugiat proident ex adipisicing amet dolore esse.',
         link: 'https://burgermaze-70016.web.app/',
         git: 'https://burgermaze-70016.web.app/',
+        technologies: ['ReactJs', 'Python']
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const dataProjects = [
         description: 'Qui sit enim veniam et nisi reprehenderit proident. Exercitation sit qui quis sit labore sint aute ipsum mollit. Qui cupidatat do quis sint et minim dolore ipsum amet deserunt deserunt ad quis sunt. Duis fugiat proident ex adipisicing amet dolore esse.',
         link: 'https://burgermaze-70016.web.app/',
         git: 'https://burgermaze-70016.web.app/',
+        technologies: ['ReactJs', 'Python']
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ const dataProjects = [
         description: 'Qui sit enim veniam et nisi reprehenderit proident. Exercitation sit qui quis sit labore sint aute ipsum mollit. Qui cupidatat do quis sint et minim dolore ipsum amet deserunt deserunt ad quis sunt. Duis fugiat proident ex adipisicing amet dolore esse.',
         link: 'https://burgermaze-70016.web.app/',
         git: 'https://burgermaze-70016.web.app/',
+        technologies: ['ReactJs', 'Python']
     }
 ];
 

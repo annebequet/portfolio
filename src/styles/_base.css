@@ -1,6 +1,6 @@
 :root {
     --opacity: 0.6;
-    --font-size: 1.3em;
+    --font-size: 1.1em;
     --font-size-details: 0.8em;
     --title-font-size: 2em;
     --large-gap: 7em;
@@ -10,21 +10,23 @@
 
 @media screen and (min-width: 700px) {   
     :root {
-        --font-size : 1.5em;
+        --font-size : 1.3em;
         --font-size-details : 0.8em;
-        --title-font-size : 2.5em;
+        --title-font-size : 2em;
         --gap: 2em;
     }
 }
 
 @media screen and (min-width: 990px) {   
     :root {
-        --font-size : 1.7em;
+        --font-size : 1.5em;
         --font-size-details : 0.8em;
-        --title-font-size : 3em;
+        --title-font-size : 2.5em;
         --gap: 3em;
     }
 }
+
+/* link style */
 
 .nav__link {    
     text-decoration: none;
@@ -49,4 +51,16 @@
     display: block;
     position: absolute;
     bottom: 0;
+}
+
+/* reset */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2, h3, div {
+    margin: 0;
 }
