@@ -26,7 +26,7 @@ export default class extends AbstractView {
                 <div id="contact__header">
                     <h1>I would love to hear from you,</h1>
                     <h1>Feel free to drop me a line.</h1>
-                    <h2 id="my-email">a.bequet@live.fr</h2>
+                    <a class="nav__link" id="my-email" HREF="mailto:a.bequet@live.fr">a.bequet@live.fr</a>
                 </div>
 
                 <div id="whale-contact">

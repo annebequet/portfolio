@@ -20,6 +20,7 @@
 
 #my-email {
     margin-top: 1em;
+    font-size: 1.5em !important;
 }
 
 #social-medias{
@@ -65,6 +66,8 @@
     align-items: center;   
     position: relative;
     overflow: hidden;
+    opacity: var(--opacity);    
+    filter: grayscale(80%);
 }
 
 #whale-contact svg {
@@ -140,6 +143,11 @@
 
     #whale-contact {
         display: none;
+    }
+
+    #my-email{
+        font-weight: normal;
+        color: white;
     }
 }
 
