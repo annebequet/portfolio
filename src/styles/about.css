@@ -1,5 +1,6 @@
 #about {
     margin: 0 var(--gap);
+    padding-bottom: 3em;
 }
 
 #scroll-bar {

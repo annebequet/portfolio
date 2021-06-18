@@ -34,12 +34,10 @@ export default class extends AbstractView {
                     <div class="project__links">
                         <div class="project__links-subcontainer">
                             <a class="nav__link" target="_blank" href="${project.link}">site</a>
-                            <p class="animated-arrow">→</p>
                         </div>
 
                         <div class="project__links-subcontainer">
                             <a class="nav__link" target="_blank" href="${project.git}">git</a>
-                            <p class="animated-arrow">→</p>
                         </div>                        
                     </div>
                 </div>

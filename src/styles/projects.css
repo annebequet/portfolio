@@ -1,5 +1,6 @@
 #projects-container {    
     margin: 0 var(--gap);
+    padding-bottom: 3em;
 }
 
 #about-me {

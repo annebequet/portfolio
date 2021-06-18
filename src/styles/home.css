@@ -37,7 +37,7 @@ body {
 }
 
 #app {    
-    padding: 7em 0;
+    padding: 7em 0 0 0;
     /*position: relative;*/
     overflow: hidden;
 }
@@ -47,7 +47,7 @@ body {
         float: right;
     }
     #header {
-        padding: 2em var(--gap); 
+        padding: 2em var(--gap) 0; 
         background: none;   
     }
 }

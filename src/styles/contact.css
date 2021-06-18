@@ -1,11 +1,14 @@
 #contact {
-    margin: var(--margin-top) 0 var(--gap);
+    margin: var(--margin-top) 0 0 0;
     overflow: hidden;
+    background-color: rgb(238,238,238);
+    min-height: 100vh;
+    padding-bottom: var(--gap);
+    padding-bottom: 3em;
 }
 
 #contact__header {
     text-align: left;    
-    background-color: rgb(238,238,238);
     padding: var(--gap);
 }
 
@@ -23,16 +26,20 @@
     font-size: 1.5em !important;
 }
 
-#social-medias{
-    text-align: right;
-    padding: var(--gap);
+#contact__header .social-medias {
+    display: block;
 }
 
-#social-medias a:not(:last-child) {
+.social-medias{
+    text-align: right;
+    padding: 1em;
+}
+
+.social-medias a:not(:last-child) {
     margin-right: 20px;
 }
 
-#social-medias img {
+.social-medias img {
     height: 30px;
     width: auto;
 }
@@ -67,7 +74,7 @@
     position: relative;
     overflow: hidden;
     opacity: var(--opacity);    
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 }
 
 #whale-contact svg {

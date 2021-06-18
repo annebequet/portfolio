@@ -14,7 +14,7 @@ export default class extends AbstractView {
         return `
             <div id="contact">
 
-                <div id="social-medias">
+                <div class="social-medias">
                     <a target="_blank" class="social-medias__icons" href="https://www.linkedin.com/in/anne-bequet/">
                         <img src=${linkedin} alt="linkedin"/>
                     </a>
