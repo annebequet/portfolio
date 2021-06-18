@@ -52,3 +52,28 @@
 .about-section{
     height: 50vh;
 }
+
+#whale-image {
+    height: 25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#whale-container {
+    width: 25em;
+    border-radius: 50%;
+    height: 25em;
+    background-size: contain;
+    background-repeat: repeat;
+    animation: bg-slide 3s linear;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+}
+
+@-webkit-keyframes bg-slide {
+    from { transform: translate(-100%, 100%); }
+    to { transform: translate(0%, 0%); }
+}
+

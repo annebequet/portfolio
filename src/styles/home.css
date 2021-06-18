@@ -47,7 +47,7 @@ body {
         float: right;
     }
     #header {
-        padding: 2em 4em; 
+        padding: 2em var(--gap); 
         background: none;   
     }
 }

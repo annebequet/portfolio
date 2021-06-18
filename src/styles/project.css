@@ -1,3 +1,7 @@
+#project {
+    margin-top: var(--margin-top);
+}
+
 .project__header {
     text-align: center;
     background-color: rgb(238,238,238);
@@ -121,18 +125,7 @@
     color: white;
 }
 
-
-@media screen and (min-width: 700px) {  
-    .project__header {
-        margin-top: 2em;
-    }
-}
-
-@media screen and (min-width: 990px) {  
-    .project__header {
-        margin-top: 5em;
-    }
-
+@media screen and (min-width: 990px) {
     .project__links a{    
         border: none;
         margin: 0.5em 0;

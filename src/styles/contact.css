@@ -1,3 +1,150 @@
 #contact {
-    margin: 0 var(--gap);
+    margin: var(--margin-top) 0 var(--gap);
+    overflow: hidden;
+}
+
+#contact__header {
+    text-align: left;    
+    background-color: rgb(238,238,238);
+    padding: var(--gap);
+}
+
+#contact__header h1 {
+    font-size: var(--title-font-size);
+}
+
+#contact__header h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#my-email {
+    margin-top: 1em;
+}
+
+#social-medias{
+    text-align: right;
+    padding: var(--gap);
+}
+
+#social-medias a:not(:last-child) {
+    margin-right: 20px;
+}
+
+#social-medias img {
+    height: 30px;
+    width: auto;
+}
+
+#aknowledgments {
+    text-align: center;    
+    margin-top: var(--gap);
+}
+
+#credits {
+    font-size: var(--font-size-details);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.credit-list{
+    font-size: var(--font-size-details) !important;
+    font-style: italic !important;
+    color: black !important;
+    opacity: var(--opacity) !important;
+}
+
+#whale-contact {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: var(--gap) auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: relative;
+    overflow: hidden;
+}
+
+#whale-contact svg {
+    height: 8em !important;
+    width: 20em !important;
+    position: absolute;
+    bottom: -1em;
+    margin: auto;
+    left: 0em;
+}
+
+#whale-contact path {
+    fill: rgb(1, 27, 86, 0.8) !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+#whale-contact__picture {
+    height: 280px;
+}
+
+
+@media screen and (min-width: 600px) { 
+    #whale-contact {
+        height: 400px;
+        width: 400px;
+    }  
+
+    #whale-contact svg {
+        width: 30em !important;
+    }
+
+    #whale-contact__picture {
+        height: 380px;
+    }
+}
+
+@media screen and (min-width: 900px) {    
+    #contact__header {
+        width: 40vw;
+        height: 40vw;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        margin: auto;
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        max-width: 550px;
+        max-height: 550px;
+    }
+
+    #whale-contact {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 990px) {   
+    #contact {
+        margin: var(--margin-top) 10em var(--gap);
+    }
 }

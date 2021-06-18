@@ -73,7 +73,7 @@ export const projectsAnimation = {
         
         function startAnimation(event) {
             if (isMouseDown) {
-                moveAt(event.pageX, event.pageY);
+                moveAt(event.pageX, event.pageY)
             }
         }
 

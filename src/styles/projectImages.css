@@ -71,7 +71,7 @@
     opacity: 0.9 !important;
     transition: all 1s;
     -webkit-transition: all 1s;
-    filter: grayscale(50%) !important;
+    filter: grayscale(80%) !important;
 }
 
 @media screen and (max-width: 990px) {   

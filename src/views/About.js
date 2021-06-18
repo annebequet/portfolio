@@ -1,4 +1,5 @@
 import AbstractView from "./AbstractView.js";
+import whale from "../assets/img/whale.png";
 
 export default class extends AbstractView {
     constructor(params) {
@@ -14,6 +15,10 @@ export default class extends AbstractView {
                 <div class="about-section">Blue sparkle</div>
                 <div class="about-section">Some like it hot</div>
                 <div class="about-section">Dance like a kitty</div>
+            </div>
+            
+            <div id="whale-container" style="background-image:url(${whale})";>
+                <div id="waves"></div>
             </div>
             
             <div id="scroll-bar"></div>
