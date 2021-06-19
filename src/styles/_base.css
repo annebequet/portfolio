@@ -4,9 +4,10 @@
     --font-size-details: 0.8em;
     --title-font-size: 2em;
     --large-gap: 7em;
-    --gap: 5vw;
+    --gap: 2em;
     --secondary-color: rgb(147,112,219);
     --margin-top: 0em;
+    --background-color: rgb(238,238,238);
 }
 
 @media screen and (min-width: 700px) {   
@@ -14,7 +15,7 @@
         --font-size : 1.3em;
         --font-size-details : 0.8em;
         --title-font-size : 2em;
-        --gap: 2em;
+        --gap: 3em;
         --margin-top: 2em;
     }
 }

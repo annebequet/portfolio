@@ -1,6 +1,7 @@
 #projects-container {    
     margin: 0 var(--gap);
-    padding-bottom: 3em;
+    padding-bottom: calc(var(--gap) *3);
+    min-height: calc((55vw + 40vh));
 }
 
 #about-me {

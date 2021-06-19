@@ -1,6 +1,6 @@
 #about {
     margin: 0 var(--gap);
-    padding-bottom: 3em;
+    padding-bottom: calc(var(--gap) *3);
 }
 
 #scroll-bar {

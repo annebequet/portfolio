@@ -2,6 +2,8 @@ body {
     overflow-x: hidden;
     margin: 0;
     font-family: 'Lato', Arial, sans-serif;
+    position: relative;
+    min-height: 100%;
 }
 
 #header {
@@ -37,9 +39,26 @@ body {
 }
 
 #app {    
-    padding: 7em 0 0 0;
+    padding: 6em 0 0 0;
     /*position: relative;*/
     overflow: hidden;
+}
+
+#footer {
+    height: 5em;
+}
+
+#footer::before {
+    height: 5em;
+    position: relative;
+    display: inline-block;content: "";
+    width: 80%;
+    left: 10%;
+    height: 4px;
+    background: black;
+    margin: auto;
+    display: block;
+    position: absolute;
 }
 
 @media screen and (min-width: 700px) {   
@@ -49,5 +68,8 @@ body {
     #header {
         padding: 2em var(--gap) 0; 
         background: none;   
+    }
+    #app {
+        padding: 7em 0 0 0;
     }
 }

@@ -1,11 +1,11 @@
-#project {
+.project {
     margin-top: var(--margin-top);
-    padding-bottom: 3em;
+    padding-bottom: calc(var(--gap) *3);
 }
 
 .project__header {
     text-align: center;
-    background-color: rgb(238,238,238);
+    background-color: var(--background-color);
     padding: var(--gap) 1em;
 }
 
