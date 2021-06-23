@@ -1,5 +1,5 @@
 import { projectsAnimation } from "./projects.js";
-import { parallax } from "./parallax.js";
+import { rellax } from "./parallax.js";
 
 // Switch that will select scripts to execute once a certain DOM part is loaded.
 
@@ -7,7 +7,7 @@ export const helper = (view) => {
     switch (view) {
         case 'Projects':
             projectsAnimation.init();
-            //parallax();
+            rellax();            
             break;
         case 'About':
             //parallax();

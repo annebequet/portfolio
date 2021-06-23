@@ -1,10 +1,13 @@
 
 //import Rellax from "rellax";
-import Parallax from 'parallax-js'
 
-export const parallax = () => {    
+import simpleParallax from 'simple-parallax-js';
+
+export const rellax = () => {    
     //var rellax = new Rellax('.rellax'); 
-    var scene = document.getElementById('scene');
-    console.log(scene)
-    var parallaxInstance = new Parallax(scene);
+    
+   const img = document.querySelector("#about-img");
+    new simpleParallax(img,{
+        orientation: 'right',
+    });
 }
