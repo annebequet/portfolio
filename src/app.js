@@ -20,3 +20,5 @@ window.addEventListener('popstate', router);
 // Create component Footer
 document.addEventListener("DOMContentLoaded", getFooter);
 
+
+

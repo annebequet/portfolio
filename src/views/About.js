@@ -16,14 +16,6 @@ export default class extends AbstractView {
                 <div class="about-section">Some like it hot</div>
                 <div class="about-section">Dance like a kitty</div>
             </div>
-            
-            <div id="whale-container" style="background-image:url(${whale})";>
-                <div id="waves"></div>
-            </div>
-            
-            <div id="scroll-bar"></div>
-            <div id="scroll-point"></div>
-            <div id="scroll-bar-2"></div>
         `;
     }
 }

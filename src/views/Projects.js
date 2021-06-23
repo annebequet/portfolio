@@ -1,6 +1,7 @@
 import AbstractView from "./AbstractView.js";
 import ProjectImage from "./components/ProjectImage.js";
 import dataProjects from "../data/data-projects.js";
+import mountain from "../assets/img/mountain2.png";
 
 export default class extends AbstractView {
     constructor(params) {
@@ -29,9 +30,14 @@ export default class extends AbstractView {
         return `
             <div id="projects-container">
                 
-                <div id="about-me">
-                    <h1>Hi, it's Anne</h1>
-                    <p>A front-end developer</p>
+                <div id="about-me">                    
+                   
+                    <h1>Hi, I'm Anne</h1>
+                    <p>Nice to meet you</p>
+                    <p>I am a front-end developer</p>
+                    <p>creative and passionate</p>
+                    <p>
+                    <p>
                 </div>
 
                 <div id="pictures-to-move">
