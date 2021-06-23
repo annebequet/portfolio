@@ -44,32 +44,6 @@ body {
     overflow: hidden;
 }
 
-#footer {
-    height: 5em;    
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    font-size: var(--font-size-details);
-}
-
-#footer__right, 
-#footer__left {
-    margin-top: 1em;
-}
-
-#footer::before {
-    height: 5em;
-    position: relative;
-    display: inline-block;content: "";
-    width: 80%;
-    left: 10%;
-    height: 4px;
-    background: black;
-    margin: auto;
-    display: block;
-    position: absolute;
-}
 
 @media screen and (min-width: 700px) {   
     #nav {

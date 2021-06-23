@@ -1,8 +1,8 @@
 // JS entry point that handles our router
 import About from "./About.js";
 import Project from "./Project.js";
-import Contact from "./Contact.js";
 import Projects from "./Projects.js";
+import Footer from "./Footer.js";
 
 //helpers
 
@@ -31,11 +31,6 @@ export const router = async () => {
             path: "/project/:id",
             view: Project,
             name:'Project',
-        },
-        { 
-            path: "/contact",
-            view: Contact,
-            name:"Contact",
         },
     ];
     
@@ -91,6 +86,17 @@ export const navigate = () => {
     })    
     /* Document has loaded -  run the router! */
     router();
+}
+
+
+
+// ************************ footer ***********************
+
+export const getFooter = async () => {
+    //Append Footer
+    const footerView = new Footer;
+    const footerContainer= document.querySelector('#footer-container');
+    footerContainer. innerHTML = await footerView.getHtml();
 }
 
 
