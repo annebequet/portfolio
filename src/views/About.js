@@ -10,6 +10,10 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <div id="about">
+                
+                <div id="square-div">                 
+                </div>
+                
                 <div class="about-section">Anne who ?</div>
                 <div class="about-section">Cacahuète</div>
                 <div class="about-section">Blue sparkle</div>

@@ -48,7 +48,8 @@ export default class extends AbstractView {
                         <div id="arrow-bottom"></div>
                     </div>
 
-                    <div id="square-div"></div>
+                    <div id="square-div">                   
+                    </div>
                 </div>
 
                 <div id="pictures-to-move">

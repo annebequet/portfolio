@@ -27,6 +27,7 @@
 
 #about-introduction {
     border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
     padding-left: var(--gap);
     padding-bottom: 1em;
     align-self: flex-end;
@@ -78,20 +79,20 @@
 
 #square-div {    
     position: absolute;
-    height: 30em;
-    width: 20em;
-    left: 400px;
-    top: -12em;
+    height: 20em;
+    width: 40em;
+    left: 0;
+    bottom: 2.7em;
     display: none;
     background-repeat: no-repeat;
-    background-image:   linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
-                        linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%),
-                        linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
-                        linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
-    background-size:    100% 3px,
-                        3px 100%,
-                        100% 3px,
-                        3px 100%;
+    background-image:   linear-gradient(to right, black 100%, white 100%),
+                        linear-gradient(to bottom, black 100%, #C9C9C9 100%),
+                        linear-gradient(to right, black 100%, #C9C9C9 100%),
+                        linear-gradient(to bottom, black 100%, #C9C9C9 100%);
+    background-size:    100% 4px,
+                        4px 100%,
+                        100% 4px,
+                        4px 100%;
     background-position:    0 0,
                             100% 0,
                             100% 100%,

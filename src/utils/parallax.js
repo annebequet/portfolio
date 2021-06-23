@@ -10,4 +10,9 @@ export const rellax = () => {
     new simpleParallax(img,{
         orientation: 'right',
     });
+
+    const square = document.querySelector("#square-div");
+    new simpleParallax(square,{
+        orientation: 'left',
+    });
 }
