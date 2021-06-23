@@ -5,7 +5,7 @@
 }
 
 #about-me {
-    margin-top: 10em;
+    margin: var(--gap);
     display: flex;
     position: relative;
 }
@@ -42,6 +42,9 @@
     opacity: 0.6;
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
+    height: 100%;
+    align-self: flex-end;
+    display: none;
 }
 
 #about-guide {    
@@ -50,6 +53,7 @@
     margin-left: var(--gap);
     border-left: 1px solid gray;
     padding-left: var(--gap);
+    display: none;
 }
 
 #pictures-to-move__title {
@@ -76,7 +80,8 @@
     height: 30em;
     width: 20em;
     left: 400px;
-    top: -7em;
+    top: -12em;
+    display: none;
 }
 
 @media screen and (min-width: 990px) {   
@@ -85,3 +90,24 @@
         min-height: calc((55vw + 40vh));
     }
 }
+
+
+@media screen and (min-width: 1450px) {   
+    #about-guide {
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 750px) {   
+    #about-img {   
+        display: block;
+    }   
+    #square-div {
+        display: block;
+    } 
+    #about-me {      
+        margin: 15em 0 var(--gap);
+    }
+}
+
