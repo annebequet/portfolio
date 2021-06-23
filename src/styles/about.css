@@ -3,55 +3,10 @@
     padding-bottom: calc(var(--gap) *3);
 }
 
-#scroll-bar {
-    width: 2px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
-    position:fixed;
-    height: 50vh;
-    top: 50vh;
-    left: 20vw;    
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 1s ease-in-out; /** Firefox **/
-    -o-transition: all 1s ease-in-out; /** Opera **/
-    opacity: var(--opacity);
-}
-
-.move-scroll-bar{
-    transform: translate(0,-50vh);
-    -webkit-transform: translate(0,-50vh);
-    -o-transform: translate(0,-50vh); 
-    -moz-transform: translate(0,-50vh);
-}
-
-#scroll-bar-2 {
-    width: 2px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
-    position:fixed;
-    height: 50vh;
-    top: 50vh;
-    left: 20vw;
-    opacity: var(--opacity);
-}
-
-#scroll-point{
-    height: 20px;
-    background-color: black;
-    width: 20px;
-    border-radius: 20px;
-    left: calc(20vw - 10px);
-    top: 50vh;
-    position: fixed;
-    opacity: 0.9;
-}
-
-#about {
-    margin-left: 25vw;
-    margin-top: var(--large-gap)
-}
-
-.about-section{
-    height: 50vh;
+.square-about {
+    top: 50vh !important;
+    left: 50% !important;
+    transform: translate(-50vh, -50%) !important;
 }
 
 #whale-image {

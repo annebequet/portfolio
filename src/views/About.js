@@ -11,9 +11,9 @@ export default class extends AbstractView {
         return `
             <div id="about">
                 
-                <div id="square-div">                 
+                <div id="square-div" class="square-about" >                 
                 </div>
-                
+
                 <div class="about-section">Anne who ?</div>
                 <div class="about-section">Cacahuète</div>
                 <div class="about-section">Blue sparkle</div>

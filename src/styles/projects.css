@@ -39,13 +39,24 @@
 }
 
 #about-img {    
-    width: 500px;
+    width: 600px;
     opacity: 0.6;
-    border-right: 1px solid gray;
     border-bottom: 1px solid gray;
     height: 100%;
     align-self: flex-end;
     display: none;
+}
+
+#about-img-container {
+    margin-bottom: 3em;
+    width: 500px
+}
+
+#about-circle {
+    height: 20px;
+    width: 20px;
+    border: 3px solid gray;
+    border-radius: 50%;
 }
 
 #about-guide {    
@@ -79,10 +90,10 @@
 
 #square-div {    
     position: absolute;
-    height: 20em;
-    width: 40em;
-    left: 0;
-    bottom: 2.7em;
+    height: 30em;
+    width: 20em;
+    left: 400px;
+    top: -12em;
     display: none;
     background-repeat: no-repeat;
     background-image:   linear-gradient(to right, black 100%, white 100%),

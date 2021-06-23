@@ -32,7 +32,10 @@ export default class extends AbstractView {
                 
                 <div id="about-me">   
                 
-                    <img src=${mountain} alt="mountain" id="about-img" data-depth="0.2">
+                    <div id="about-img-container">
+                        <div data-depth="0.7" id="about-circle"></div>
+                        <img src=${mountain} alt="mountain" id="about-img" data-depth="0.2">
+                    </div>
                    
                     <div id="about-introduction" data-depth="0.6">
                         <h1>Hi, I'm Anne</h1>
