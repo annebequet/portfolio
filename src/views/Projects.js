@@ -30,14 +30,25 @@ export default class extends AbstractView {
         return `
             <div id="projects-container">
                 
-                <div id="about-me">                    
+                <div id="about-me">   
+                
+                    <img src=${mountain} alt="mountain" id="about-img" data-depth="0.2">
                    
-                    <h1>Hi, I'm Anne</h1>
-                    <p>Nice to meet you</p>
-                    <p>I am a front-end developer</p>
-                    <p>creative and passionate</p>
-                    <p>
-                    <p>
+                    <div id="about-introduction" data-depth="0.6">
+                        <h1>Hi, I'm Anne</h1>
+                        <p>Nice to meet you.</p>
+                        <p>I am a front-end developer, currently working as a freelance,
+                        <p>and experiencing with creative coding (as well as pumpkin soup).</p>
+                        <p>This is my first portfolio, feel free to explore and don't hesitate to drop me a line</p>
+                        <p>I'm open to job offers or any kind of feedback !</p>
+                    </div>
+
+                    <div id="about-guide">
+                        <h2 id="pictures-to-move__title">Projects</h2>                        
+                        <div id="arrow-bottom"></div>
+                    </div>
+
+                    <div id="square-div"></div>
                 </div>
 
                 <div id="pictures-to-move">

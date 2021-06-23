@@ -18,19 +18,19 @@
 
 #picture-container__1 {
     left: 47.5vw;
-    top: 15vw;
+    top: 55vh;
     width: 60%;
 }
 
 #picture-container__2 {  
     left: 17vw;
-    top: 35vw;
+    top: 50vh;
     width: 30%;
 }
 
 #picture-container__3 {
-    top: 55vw;
-    left: 40vw;
+    top: 100vh;
+    left: 70vw;
     width: 40%;
 }
 

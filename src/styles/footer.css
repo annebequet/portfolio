@@ -61,6 +61,7 @@
 #arrow-to-top {
     position: absolute;
     right: 1.8em;
+    cursor: pointer;
 }
 
 .round {

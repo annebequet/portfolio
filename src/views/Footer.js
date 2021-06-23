@@ -37,7 +37,7 @@ export default class extends AbstractView {
                         <a id="my-email" HREF="mailto:a.bequet@live.fr">a.bequet@live.fr</a>    
                     </div>
 
-                    <a id="arrow-to-top" href="#header">
+                    <a id="arrow-to-top" onclick="window.scrollTo(0, 0);">
                         <div class="center-con">
         
                             <div class="round">
