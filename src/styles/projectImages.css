@@ -1,5 +1,6 @@
 #pictures-to-move {
     height: 50em;
+    margin: var(--gap);
 }
 
 .picture-container {
