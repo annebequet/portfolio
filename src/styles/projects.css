@@ -5,7 +5,7 @@
 }
 
 #about-me {
-    margin: var(--gap);
+    margin: var(--gap) var(--gap) 6em;
     display: flex;
     position: relative;
 }
@@ -63,9 +63,10 @@
 #about-guide {    
     justify-self: flex-end;
     align-self: flex-end;
-    margin-left: var(--gap);
+    margin-left: 0;
     padding-left: var(--gap);
-    display: none;
+    position: absolute;
+    bottom: -2em;
 }
 
 #pictures-to-move__title {
@@ -154,18 +155,16 @@
 }
 
 
-@media screen and (min-width: 990px) and (max-width: 1450px){   
+@media screen and (min-width: 750px) and (max-width: 1450px){   
     #about-guide {
-        display: block;
-        position: absolute;
-        top: 0;
+        top: 0;      
+        margin-left: var(--gap);
     }
 }
 
 @media screen and (min-width: 1450px){   
     #about-guide {
         position: relative;
-        display: block;
         border-left: 1px solid gray;
     }    
 }
