@@ -19,17 +19,8 @@
 
 .about-nav--link {
     position: relative;
-    margin: 0 5em;
-}
-
-.about-nav--link::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: -1rem;
-      width: 0.25rem;
-      height: 100%;
-      transition: 0.6s;
+    margin: 0 5em; 
+    padding: 0.5em 0;
 }
 
 .about-nav--link a {
@@ -39,57 +30,85 @@
       letter-spacing: 0.2em;
       text-decoration: none;
       opacity: var(--opacity);
-      font-weight: lighter;  
-      background: linear-gradient(white 0 100%) left / 0
-      no-repeat;
+      font-weight: lighter;        
       position: relative;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      transition: background-size 0.45s 0.04s;
 }
 
-.about-nav--link a::before {
+#journey-link a {
+    background: linear-gradient(white 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-size 0.45s 0.04s;
+}
+
+#skills-link a {
+    background: linear-gradient(white 0 100%) right / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-size 0.45s 0.04s;
+}
+
+#journey-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -2rem;
+    width: 0.25rem;
+    height: 100%;
+    transition: 0.6s;
+    background: black;
+}
+
+#skills-link::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -2rem;
+    width: 0.25rem;
+    height: 100%;
+    transition: 0.6s;
+    background: black;
+    z-index: -1;
+}
+
+#journey-link a::before {
     position: absolute;
     content: attr(data-text);
     z-index: -1;
     color: black;
 }
 
-.about-nav--link:hover::before{
+#journey-link:hover::before{
     /*left: calc(100% + 1rem);*/
-    width: calc(100% + 2rem);
-    height: calc(100% + 1em);
-    top: -0.5em;      
+    width: calc(100% + 4rem);
 }
 
-.journey-link:hover{
-    padding: 0.5em 0;   
+#skills-link a::after {
+    position: absolute;
+    content: attr(data-text);
+    z-index: -1;
+    color: black;
+    right: 0;
 }
 
-.skills-link-link:hover{
-    padding: 0.5em 0;   
-}
-
-.about-nav-link-active {
-    opacity: 1 !important;
-    font-weight: bold !important;
-}
-
-#journey-link::before {
-    background: black;
+#skills-link:hover::after{
+    /*left: calc(100% + 1rem);*/
+    width: calc(100% + 4rem);
 }
 
 #journey-link a:hover {
     background-size: 100%;
 }
 
-#skills-link::before {
-    background: black;
-}
-
 #skills-link a:hover {
     background-size: 100%;
+}
+
+.about-nav-link-active {
+    opacity: 1 !important;
+    font-weight: bold !important;
 }
 
 
