@@ -271,23 +271,44 @@
     position: absolute;
     display: flex;
     justify-content: space-around;
-    background-color: aliceblue;
+    background-color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 672.91px;
 }
 
+#skills h3 {    
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#skills ul{    
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+#skills li {    
+    opacity: var(--opacity);
+    display: inline;
+}
+
+
 #skills-left-container { 
     padding: 3em;   
     width: 300px;
-    padding-right: 10em;
+    padding-right: 10em;    
+    background-color: ghostwhite;
 }
 
 #skills-right-container { 
     padding: 3em;   
     width: 300px;
-    padding-left: 10em;
+    padding-left: 10em;    
+    background-color: ghostwhite;
 }
 
 .skills-subcontainer {

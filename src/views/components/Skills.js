@@ -11,15 +11,30 @@ export default class extends AbstractView {
         return `
             <div id="skills">
                 <div id="skills-left-container">                
-                    <div  class="skills-subcontainer" id="hard-skills-container">
+                    <div id="hard-skills-container">
                         <h2>Hard skills</h2>
-                        <p>Javascript - ReactJs - React Native - PHP</p>
-                        <p>HTML5 - CSS3 - Sass</p>
-                        <p>Architecture POO, MVC</p>
+                        <ul>Frontend</ul>
+                        <li>Figma</li>
+                        <li>HTML5</li>
+                        <li>CSS3 - Sass - Bootstrap</li>
+                        <li>Javascript</li>
+                        <li>ReactJs - React Native - Redux</li>
+                        <ul>Backend (work in progress)</ul>
+                        <li>PHP5</li>
+                        <li>SQL</li>
+                        <ul>Programming paradigms</ul>
+                        <li>OOP - functionnal programming</li>
+                        <ul>Tools</ul>
+                        <li>Git</li>
+                        <li>Linux - Windows</li>
+                        <li>VSC</li>
+                        <ul>Approach</ul>
+                        <li>I'm really passionate and eager to learn.</li>
+                        <li>I'm really passionate and eager to learn.</li>
+                        <li>I'm really passionate and eager to learn.</li>
+                        <li>I
                     </div>
-                    <div class="skills-subcontainer" id="plus-skills-container">
-                        <div></div>
-                    </div>
+                    
                 </div>
 
                 <div id="about-section-info">
