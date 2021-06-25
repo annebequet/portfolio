@@ -1,13 +1,287 @@
-#about {
+#about-container {
     margin: 0 var(--gap);
-    padding-bottom: calc(var(--gap) *3);
+    height: calc(100vh - 7em);
+    position: relative;
 }
 
-.square-about {
-    top: 50vh !important;
-    left: 50% !important;
-    transform: translate(-50vh, -50%) !important;
+/* Navbar */
+
+#navbar-about {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: var(--gap);
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
+
+.about-nav--link {
+    position: relative;
+    margin: 0 5em;
+}
+
+.about-nav--link::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -1rem;
+      width: 0.25rem;
+      height: 100%;
+      transition: 0.6s;
+}
+
+.about-nav--link a {
+      cursor: pointer;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      opacity: var(--opacity);
+      font-weight: lighter;  
+      background: linear-gradient(white 0 100%) left / 0
+      no-repeat;
+      position: relative;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: background-size 0.45s 0.04s;
+}
+
+.about-nav--link a::before {
+    position: absolute;
+    content: attr(data-text);
+    z-index: -1;
+    color: black;
+}
+
+.about-nav--link:hover::before{
+    /*left: calc(100% + 1rem);*/
+    width: calc(100% + 2rem);
+    height: calc(100% + 1em);
+    top: -0.5em;      
+}
+
+.journey-link:hover{
+    padding: 0.5em 0;   
+}
+
+.skills-link-link:hover{
+    padding: 0.5em 0;   
+}
+
+.about-nav-link-active {
+    opacity: 1 !important;
+    font-weight: bold !important;
+}
+
+#journey-link::before {
+    background: black;
+}
+
+#journey-link a:hover {
+    background-size: 100%;
+}
+
+#skills-link::before {
+    background: black;
+}
+
+#skills-link a:hover {
+    background-size: 100%;
+}
+
+
+
+/* Parallax section */
+
+#square-about img {
+    height: 75vh;
+}
+
+
+#about-container-parallax {    
+    height: calc(100vh - 7em);
+}
+
+#square-about {    
+    position: absolute !important;    
+    left:0 !important;
+    right:0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 7em !important;
+}
+
+
+#about-title {    
+    top: 30% !important;
+    left: 0 !important;
+    right: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*section title */
+
+#about-section-info {
+    height: 150px;
+    justify-content: space-between;
+    font-size: 1em;
+    margin: auto 0 !important;    
+    justify-self: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.about-section--title {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bold;
+}
+
+.about-section--title::after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 2px;
+    top:  calc(50% + 100px);
+    height: 150px;
+    margin-right: 8px;
+}
+
+.about-section--title::before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 2px;
+    bottom: calc(50% + 100px);
+    height: 150px;
+    margin-right: 8px;
+}
+
+
+/* Journey Template */
+
+#journey {
+    top: var(--gap);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#journey-text-container { 
+    padding: 3em;   
+    width: 300px;
+    padding-right: 10em;
+}
+
+#journey-text-container h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#journey-text-container h2 {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.journey-text {
+    letter-spacing: 0.1em;
+    line-height: 1.7em;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+
+#journey-timeline-container {  
+    padding: 3em;
+    width: 300px;
+    padding-left: 10em;
+}
+
+#journey-timeline-container h2{    
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.work-experience {
+    margin-bottom: 2em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.work-time-frame {
+    opacity: var(--opacity);
+}
+
+.work-technology {
+    font-size: var(--font-size-details);
+    margin-left: 1em;
+}
+
+.work-position {
+    font-weight: bold;
+}
+
+.work-company {
+    text-transform: uppercase;
+}
+
+
+/* Skills Template */
+
+#skills {
+    top: var(--gap);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 672.91px;
+}
+
+#skills-left-container { 
+    padding: 3em;   
+    width: 300px;
+    padding-right: 10em;
+}
+
+#skills-right-container { 
+    padding: 3em;   
+    width: 300px;
+    padding-left: 10em;
+}
+
+.skills-subcontainer {
+    height: 50%
+}
+
+
+
+@-webkit-keyframes bg-slide {
+    from { transform: translate(-100%, 100%); }
+    to { transform: translate(0%, 0%); }
+}
+
 
 #whale-image {
     height: 25em;
@@ -26,10 +300,5 @@
     position: absolute;
     bottom: 0;
     left: -100px;
-}
-
-@-webkit-keyframes bg-slide {
-    from { transform: translate(-100%, 100%); }
-    to { transform: translate(0%, 0%); }
 }
 

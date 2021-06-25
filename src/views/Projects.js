@@ -57,7 +57,7 @@ export default class extends AbstractView {
                         <div onclick="window.scrollTo(0, 650);" id="arrow-bottom"></div>                        
                     </div>
 
-                    <div id="square-div">                   
+                    <div class="square-div">                   
                     </div>
                 </div>
 

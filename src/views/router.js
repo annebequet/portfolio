@@ -77,7 +77,7 @@ const navigateTo = url => {
 };
 
 export const navigate = () => {
-    //using bubbling by attaching to the node parent the event listener, so that if a nav element is added later, the event will still apply
+    //using bubbling by attaching to the node parent the event listener
     document.body.addEventListener("click", function(e) {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
@@ -87,7 +87,6 @@ export const navigate = () => {
     /* Document has loaded -  run the router! */
     router();
 }
-
 
 
 // ************************ footer ***********************

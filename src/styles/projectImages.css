@@ -31,7 +31,8 @@
 #picture-container__3 {
     top: 73em;
     left: 3em;
-    width: 60vw;
+    width: auto;
+    height: 50vh;
 }
 
 

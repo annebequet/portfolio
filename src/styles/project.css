@@ -1,6 +1,6 @@
 .project {
-    margin-top: var(--margin-top);
     padding-bottom: calc(var(--gap) *3);
+    margin: var(--margin-top) var(--gap) 0;
 }
 
 .project__header {
@@ -20,9 +20,8 @@
 }
 
 .project img {    
-    max-width: 950px;
+    width: 100%;
     height: auto;
-    max-width: 100%;
     margin: var(--gap) auto;
     align-items: center;
     border: 1px solid rgba(0,0,0,.15);
