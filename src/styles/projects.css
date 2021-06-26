@@ -6,8 +6,9 @@
 
 /* about presentation */
 
-#about-me {
-    width: 300px;
+#about-me { 
+    margin: 3em auto 0;
+    padding: 1em;
     margin: auto;
     display: flex;
     position: relative;
@@ -34,9 +35,8 @@
 }
 
 #about-introduction {
-    width: 200px;
     padding-left: var(--gap);
-    align-self: flex-end;
+    align-self: center;
     line-height: 1.3em;
     letter-spacing: 0.1em;
     padding: 2em;
@@ -49,39 +49,18 @@
     margin: auto;
     position: relative;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 1em;
+    padding: 2em;
 }
 
 #text-line {
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-weight: bold;    
-    height: 200px;
+    font-weight: bold;
     text-align: center;
+    position: relative;
 }
-
-#text-line::before {  
-        content: '';
-        background-color: black;
-        position: absolute;
-        width: 2px;
-        top: 2px;
-        height: 10px;
-        margin-right: 8px; 
-}
-
-#text-line::after {      
-    content: '';
-    background-color: black;
-    position: absolute;
-    width: 2px;
-    height: 10px;
-    margin-right: 8px;
-}
-
 
 /* Parallax section */
 
@@ -95,7 +74,6 @@
 #container-parallax {        
     height: 15em;
     align-self: center;
-    width: 500px;
     margin-top: 5em;
 }
 
@@ -106,9 +84,9 @@
 /* inspiration : https://codepen.io/paolocavanna/pen/qNKAyX */
 
 .square-div {   
-    margin: auto; 
-    height: 20em;
-    width: 15em;
+    height: 5em;
+    width: 10em;
+    margin: auto;
     top: -2em !important;
     background-repeat: no-repeat;
     background-image:   linear-gradient(to right, black 100%, white 100%),
@@ -200,15 +178,50 @@
     width: 550px;
 }
 
+@media screen and (min-width: 400px) {
+    .square-div {   
+        height: 5em;
+        width: 10em;
+    }
+}
+
+@media screen and (min-width: 594px) {
+    #container-parallax {
+        width: calc(100% + 4em);
+    }
+
+    #parallax-img {
+        width: 800px
+    }
+
+    .square-div {
+        height: 20em;
+    }
+}
 
 
 
+@media screen and (min-width: 990px) { 
+    .square-div {
+        height: 5em;
+    }
 
-@media screen and (min-width: 990px) {   
+    #parallax-img {
+        width: 550px;
+    }
+
+    #about-me { 
+        width: 300px;
+    }
+    
+    #about-introduction {
+        width: 200px;
+    }
     
     #projects-container {    
         min-height: calc((55vw + 40vh));
     }
+
 }
 
 

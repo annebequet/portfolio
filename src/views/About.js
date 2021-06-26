@@ -1,7 +1,6 @@
 import AbstractView from "./AbstractView.js";
 import Journey from "./components/Journey";
 import whale from "../assets/img/whale.png";
-import mountain from "../assets/img/mountain1.png";
 
 export default class extends AbstractView {
     constructor(params) {

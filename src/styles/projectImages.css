@@ -20,19 +20,18 @@
 #picture-container__1 {
     top: 50em;
     left: 40vw;
-    width: 50vw;
+    width: 60vw;
 }
 
 #picture-container__2 {  
     left: 17vw;
-    width: 30%;
+    width: 50vw;
 }
 
 #picture-container__3 {
     top: 73em;
     left: 3em;
-    width: auto;
-    height: 50vh;
+    width: 20vw;
 }
 
 
@@ -40,8 +39,8 @@
 #picture-container__2 img,
 #picture-container__3 img {
    position: relative;
-   height: 100%;
    width: 100%;
+   height: 100%;
 }
 
 .picture-container__informations{

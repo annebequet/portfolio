@@ -45,16 +45,15 @@ export default class extends AbstractView {
 
                 
                 <div id="skills-right-container">
-                    <div class="skills-subcontainer" id="goals-skills-container">
-                        <div></div>
-                    </div>
-
                     <div class="skills-subcontainer" id="random-skills-container">
                         <h2>Random stuff</h2>
                         <p>Whales</p>
                         <p>Languages</p>
                         <p>Weird Halloween obsession</p>
-                        <p>Reading</p>
+                        <p>Reading</p>                        
+                        <p class="journey-text">
+                            If you don't find me behind a book or a computer, chances are I am gonna be outside, drawing whales or exploring whatever crosses my path.
+                        </p>  
                     </div>
                 </div>
 

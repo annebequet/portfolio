@@ -9,32 +9,7 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <div id="journey">
-                <div id="journey-text-container">
-                    <h1>Anne Bequet</h1>
-                    <h2>Frontend developer</h2>
-                    <p class="journey-text">
-                        Passionnate about languages, any kind of language, I started in the litterature department to take a turn towards the coding universe.
-                    </p>
-                    <p class="journey-text">
-                        I am a happy and curious developer, testing out my creativity while learning to build robust, clean, and maintanable code.
-                    </p>
-                    <p class="journey-text">
-                        If you don't find me behind a book or a computer, chances are I am gonna be outside, drawing whales or exploring whatever crosses my path.
-                    </p>
-                </div>
-
                 
-                <p>and experiencing with creative coding (as well as pumpkin soup).</p>
-                <p>This is my first portfolio, feel free to explore and don't hesitate to drop me a line</p>
-                <p>I'm open to job offers or any kind of feedback !</p>
-
-                
-                <div id="about-section-info">
-                    <p class="about-section--title">
-                        Journey
-                    </p>
-                </div>
-
                 <div id="journey-timeline-container">
                     <h2>Travel through time</h2>
                     
@@ -100,6 +75,25 @@ export default class extends AbstractView {
                             Schools / freelance
                         </p>
                     </div>                     
+                </div>
+
+                
+                <div id="about-section-info">
+                    <p class="about-section--title">
+                        Journey
+                    </p>
+                </div>
+
+                <div id="journey-text-container">
+                    <h1>Anne Bequet</h1>
+                    <h2>Frontend developer</h2>
+                    <p class="journey-text">
+                        Passionnate about languages, any kind of language, I started in the litterature department to take a turn towards the coding universe.
+                    </p>
+                    <p class="journey-text">
+                        I am a happy and curious developer, testing out my creativity while learning to build robust, clean, and maintanable code.
+                    </p>
+                    <p class="journey-text">This is my first portfolio, feel free to explore and don't hesitate to drop me a line</p>
                 </div>
 
             </div>

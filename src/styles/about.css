@@ -1,20 +1,29 @@
 #about-container {
     margin: 0 var(--gap);
-    height: calc(100vh - 7em);
     position: relative;
+}
+
+#render-template {
+    min-height: 692px;    
+    position: relative;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+
 }
 
 /* Navbar */
 
 #navbar-about {
     display: flex;
-    flex-direction: row;
-    position: absolute;
+    flex-direction: column;
     bottom: var(--gap);
     width: 100%;
     margin: auto;
     align-items: center;
     justify-content: center;
+    margin: var(--gap) 0;
+    margin-bottom: 6em;
 }
 
 .about-nav--link {
@@ -29,25 +38,50 @@
       font-weight: bold;
       letter-spacing: 0.2em;
       text-decoration: none;
-      opacity: var(--opacity);
       font-weight: lighter;        
       position: relative;
+      color: gray;
+}
+
+#journey-link {
+    text-align: center;
 }
 
 #journey-link a {
     background: linear-gradient(white 0 100%) left / 0 no-repeat;
-    color: transparent;
+    color: black;
+    opacity: var(--opacity);
     background-clip: text;
     -webkit-background-clip: text;
     transition: background-size 0.45s 0.04s;
+    font-size: 1.2em;
+    border: 1px solid #000;
+        border-top-color: rgb(0, 0, 0);
+        border-right-color: rgb(0, 0, 0);
+        border-bottom-color: rgb(0, 0, 0);
+        border-left-color: rgb(0, 0, 0);
+    padding: 0.3em 1em;
+}
+
+#skills-link {
+    text-align: center;
+    margin-top: 2em;
 }
 
 #skills-link a {
     background: linear-gradient(white 0 100%) right / 0 no-repeat;
-    color: transparent;
+    color: black;
+    opacity: var(--opacity);
     background-clip: text;
     -webkit-background-clip: text;
     transition: background-size 0.45s 0.04s;
+    font-size: 1.2em;
+    border: 1px solid #000;
+        border-top-color: rgb(0, 0, 0);
+        border-right-color: rgb(0, 0, 0);
+        border-bottom-color: rgb(0, 0, 0);
+        border-left-color: rgb(0, 0, 0);
+    padding: 0.3em 1em;
 }
 
 #journey-link::before {
@@ -59,6 +93,7 @@
     height: 100%;
     transition: 0.6s;
     background: black;
+    display: none;
 }
 
 #skills-link::after {
@@ -71,6 +106,7 @@
     transition: 0.6s;
     background: black;
     z-index: -1;
+    display: none;
 }
 
 #journey-link a::before {
@@ -78,6 +114,7 @@
     content: attr(data-text);
     z-index: -1;
     color: black;
+    display: none;
 }
 
 #journey-link:hover::before{
@@ -91,6 +128,7 @@
     z-index: -1;
     color: black;
     right: 0;
+    display: none;
 }
 
 #skills-link:hover::after{
@@ -99,11 +137,13 @@
 }
 
 #journey-link a:hover {
-    background-size: 100%;
+    background-color: black;
+    color: white;
 }
 
 #skills-link a:hover {
-    background-size: 100%;
+    background-color: black;
+    color: white;
 }
 
 .about-nav-link-active {
@@ -116,13 +156,13 @@
 /*section title */
 
 #about-section-info {
-    height: 150px;
     justify-content: space-between;
     font-size: 1em;
     margin: auto 0 !important;    
     justify-self: center;
-    padding: 1em;
+    padding: 1em !important;
     background-color: white;
+    text-align: center;
 }
 
 .about-section--title {
@@ -131,6 +171,13 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-weight: bold;
+    text-align: center;
+    position: relative;
+    height: 200px;
+    text-align: center;
+    padding-right: 1em !important;
+    margin: auto;
+    display: none;
 }
 
 .about-section--title::after {
@@ -138,9 +185,9 @@
     background-color: black;
     position: absolute;
     width: 2px;
-    top:  calc(50% + 100px);
-    height: 150px;
-    margin-right: 8px;
+    bottom: calc(200px + 1em);
+    height: 75px;
+    margin-right: 8.5px;
 }
 
 .about-section--title::before {
@@ -148,9 +195,9 @@
     background-color: black;
     position: absolute;
     width: 2px;
-    bottom: calc(50% + 100px);
-    height: 150px;
-    margin-right: 8px;
+    top: calc(200px + 1em);
+    height: 75px;
+    margin-right: 8.5px;
 }
 
 
@@ -158,20 +205,17 @@
 
 #journey {
     top: var(--gap);
-    position: absolute;
     display: flex;
-    justify-content: space-around;
-    background-color: aliceblue;
-    top: 27em;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-direction: column-reverse;
+    justify-content: center;
+    background-color: white;
+    max-width: 1050px;
 }
 
 
 #journey-text-container { 
-    padding: 3em;   
-    width: 300px;
-    padding-right: 10em;
+    padding: 3em;  
+    background-color: aliceblue;
 }
 
 #journey-text-container h1 {
@@ -195,8 +239,7 @@
 
 #journey-timeline-container {  
     padding: 3em;
-    width: 300px;
-    padding-left: 10em;
+    background-color: aliceblue;
 }
 
 #journey-timeline-container h2{    
@@ -231,16 +274,12 @@
 
 /* Skills Template */
 
-#skills {
+#skills {    
     top: var(--gap);
-    position: absolute;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-around;
     background-color: white;
-    top: 27em;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 672.91px;
 }
 
 #skills h3 {    
@@ -264,20 +303,132 @@
 
 #skills-left-container { 
     padding: 3em;   
-    width: 300px;
-    padding-right: 10em;    
     background-color: ghostwhite;
 }
 
 #skills-right-container { 
     padding: 3em;   
-    width: 300px;
-    padding-left: 10em;    
     background-color: ghostwhite;
 }
 
-.skills-subcontainer {
-    height: 50%
+
+@media screen and (min-width: 500px) {
+    #navbar-about {
+        flex-direction: row;
+    }
+    
+    #journey-link::before {
+        display: inline;
+    }
+
+    #journey-link a::before {
+        display: inline;
+    }
+
+    #skills-link::after {
+        display: inline;
+    }
+
+    #skills-link a::after {
+        display: inline;
+    }
+
+    #journey-link a {
+        color: transparent;
+        border: none;
+        opacity: 1;
+    }
+
+    #skills-link {
+        margin-top: 0;
+    }
+
+    #skills-link a {
+        color: transparent;
+        border: none;
+        opacity: 1;
+    }
+
+    #journey-link a:hover {
+        background-size: 100%;
+    }
+
+    #skills-link a:hover {
+        background-size: 100%;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 990px) {
+    #journey {
+        flex-direction: row-reverse;        
+        justify-content: space-around;
+    }
+
+    #journey-text-container,
+    #journey-timeline-container,
+    #skills-right-container,
+    #skills-left-container {   
+        background-color: white;
+    }
+    
+    #journey-timeline-container,
+    #skills-left-container {
+        margin-top: 5em;
+    }
+
+    #skills {
+        flex-direction: row-reverse;        
+        justify-content: space-around;
+    }
+    
+    #journey-text-container,
+    #journey-timeline-container {   
+        width: 50%;
+    }
+
+}
+
+
+@media screen and (min-width: 990px) {   
+    
+    #journey {
+        flex-direction: row-reverse;        
+        justify-content: space-around;
+    }
+
+    
+    #skills {
+        flex-direction: row-reverse;        
+        justify-content: space-around;
+    }
+
+    #journey-text-container,
+    #journey-timeline-container,
+    #skills-right-container,
+    #skills-left-container {   
+        background-color: aliceblue;
+    }
+    
+    #journey-timeline-container,
+    #skills-left-container {
+        margin-top: 0em;
+    }
+
+    #journey-text-container,
+    #journey-timeline-container {   
+        width: 50%;
+    }
+    
+    .about-section--title {
+        display: inline;
+    }
+    
+    .about-section--title {
+        display: inline;
+    }
+
+
 }
 
 
