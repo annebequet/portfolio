@@ -14,15 +14,7 @@ export default class extends AbstractView {
         const template = await view.getHtml();
 
         return `
-            <div id="about-container">
-                
-            <div id="about-container-parallax">                
-                <div class="square-div" id="square-about"  data-depth="0.2" >
-                </div>
-
-                <div id="about-title" data-depth="-0.4"></div> 
-            </div>  
-
+            <div id="about-container">  
                 <div id="render-template">
                     ${template}
                </div>    
@@ -34,7 +26,7 @@ export default class extends AbstractView {
                         </a>
                     </p>
                     <p class="about-nav--link" id="skills-link">
-                        <a data-text="Skills" class=" about-nav-link-click">
+                        <a data-text="Skills" class="about-nav-link-click">
                             Skills
                         </a>
                     </p>

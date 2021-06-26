@@ -24,6 +24,11 @@ export default class extends AbstractView {
                 </div>
 
                 
+                <p>and experiencing with creative coding (as well as pumpkin soup).</p>
+                <p>This is my first portfolio, feel free to explore and don't hesitate to drop me a line</p>
+                <p>I'm open to job offers or any kind of feedback !</p>
+
+                
                 <div id="about-section-info">
                     <p class="about-section--title">
                         Journey

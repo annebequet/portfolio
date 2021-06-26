@@ -1,13 +1,21 @@
 #projects-container {    
-    /* margin: 0 var(--gap); */
+    margin: 0 var(--gap) 0;
     padding-bottom: calc(var(--gap) *3);
     min-height: fit-content;
 }
 
+/* about presentation */
+
 #about-me {
-    margin: var(--gap) var(--gap) 6em;
+    width: 300px;
+    margin: auto;
     display: flex;
     position: relative;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--gap);box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 #about-me h1 {
@@ -26,77 +34,82 @@
 }
 
 #about-introduction {
-    border-bottom: 1px solid gray;
+    width: 200px;
     padding-left: var(--gap);
     align-self: flex-end;
-    line-height: 2;
+    line-height: 1.3em;
     letter-spacing: 0.1em;
     padding: 2em;
     z-index: 30;
-    background-color: white;
-    margin-bottom: var(--gap);
 }
 
-#about-img {    
-    width: 600px;
-    opacity: 0.6;
-    border-bottom: 1px solid gray;
-    height: 100%;
-    align-self: flex-end;
-    left: -2em !important;
+/* Project + arrow direction */
+
+#text-line-container {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 1em;
 }
 
-#about-img-container {
-    margin-bottom: 3em;
-    width: 500px;
-    display: none;
-}
-
-#about-circle {
-    height: 20px;
-    width: 20px;
-    border: 3px solid gray;
-    border-radius: 50%;
-    left: 3em !important;
-}
-
-#about-guide {    
-    justify-self: flex-end;
-    align-self: flex-end;
-    margin-left: 0;
-    padding-left: var(--gap);
-    position: absolute;
-    bottom: -2em;
-}
-
-#pictures-to-move__title {
+#text-line {
     text-transform: uppercase;
-    z-index: 50;
-    font-size: var(--font-size);
-    line-height: 2;
-    letter-spacing: 0.1em;
-
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bold;    
+    height: 200px;
+    text-align: center;
 }
 
-#arrow-bottom {    
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  transform: rotate(135deg);
-  cursor: pointer;
+#text-line::before {  
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 2px;
+        top: 2px;
+        height: 10px;
+        margin-right: 8px; 
+}
+
+#text-line::after {      
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    margin-right: 8px;
+}
+
+
+/* Parallax section */
+
+/* inspiration : https://codepen.io/paolocavanna/pen/qNKAyX */
+
+#square-about img {
+    height: 75vh;
+}
+
+
+#container-parallax {        
+    height: 15em;
+    align-self: center;
+    width: 500px;
+    margin-top: 5em;
+}
+
+#parallax1 {
+    height: 100%;
 }
 
 /* inspiration : https://codepen.io/paolocavanna/pen/qNKAyX */
 
-.square-div {    
-    position: absolute;
-    height: 30em;
-    width: 20em;
-    left: 400px;
-    top: -12em;
-    display: none;
+.square-div {   
+    margin: auto; 
+    height: 20em;
+    width: 15em;
+    top: -2em !important;
     background-repeat: no-repeat;
     background-image:   linear-gradient(to right, black 100%, white 100%),
                         linear-gradient(to bottom, black 100%, #C9C9C9 100%),
@@ -146,6 +159,50 @@
     }
 }
 
+#parallax-circle {    
+    top: 10% !important;
+    left: 0 !important;
+    right: 100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    opacity: 0.9;
+}
+
+#img-container-introduction { 
+    position: absolute;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    z-index: -1;
+    overflow: hidden;box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin: auto 1em;
+}
+
+
+#parallax-img {
+    z-index: -1;
+    position: absolute !important;
+    left: -20px !important;
+    bottom: -50px;
+    width: 550px;
+}
+
+
+
+
 
 @media screen and (min-width: 990px) {   
     
@@ -154,36 +211,4 @@
     }
 }
 
-
-@media screen and (min-width: 750px) and (max-width: 1450px){   
-    #about-guide {
-        bottom: 1em;      
-        margin-left: var(--gap);
-    }
-}
-
-@media screen and (min-width: 1450px){   
-    #about-guide {
-        position: relative;
-        border-left: 1px solid gray;
-    }    
-}
-
-
-@media screen and (min-width: 750px) {   
-    #about-img-container {   
-        display: block;
-    }   
-    .square-div {
-        display: block;
-    } 
-    #about-me {      
-        margin: 15em 0 var(--gap);
-    }
-    #about-introduction {        
-        border-left: 1px solid gray;
-        margin-bottom: 0;
-    }
-
-}
 

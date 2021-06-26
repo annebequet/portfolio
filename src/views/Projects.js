@@ -29,37 +29,43 @@ export default class extends AbstractView {
 
         return `
             <div id="projects-container">
-                
-                <div id="about-me">   
-                
-                    <div id="about-img-container">
-                        <div data-depth="0.7" id="about-circle"></div>
-                        <img src=${mountain} alt="mountain" id="about-img" data-depth="0.4">
-                    </div>
-                   
-                    <div id="about-introduction">
-                        <div>
-                        <h1>Hi, I'm Anne</h1>
-                            <p>Nice to meet you.</p>
-                            <p>I am a front-end developer, currently working as a freelance,
-                            <p>and experiencing with creative coding (as well as pumpkin soup).</p>
-                        </div>
-                        <div>
-                            <p>This is my first portfolio, feel free to explore and don't hesitate to drop me a line</p>
-                            <p>I'm open to job offers or any kind of feedback !</p>
-                        </div>
-                    </div>
 
-                    <div id="about-guide">
-                        <div id="project-arrow">
-                            <h2 data-depth="0.4" id="pictures-to-move__title">Projects</h2> 
-                        </div>
-                        <div onclick="window.scrollTo(0, 650);" id="arrow-bottom"></div>                        
-                    </div>
+                <div id="front-page-introduction">
+                    <div id="about-me">   
 
-                    <div class="square-div">                   
-                    </div>
-                </div>
+                        <div id="about-introduction">
+                            <div>
+                                <h1>Hi, I'm Anne</h1>
+                                <p>Nice to meet you.</p>
+                                <p>I am a curious and creative front-end developer, feel free to check out my projects</p>
+                            </div>
+                        </div>
+              
+
+                        <div id="container-parallax">    
+                            <div id="parallax1">            
+                                <div class="square-div" data-depth="-0.5" >
+                                </div>
+
+                                <div id="parallax-circle" data-depth="-0.8">
+                                </div> 
+                            </div>
+
+                            <div id="img-container-introduction">
+                                <img data-depth="0.2" src=${mountain} id="parallax-img" />
+                            </div>
+                        </div> 
+                        
+                        
+                        <div id="text-line-container">
+                            <p id="text-line"> 
+                                Projects
+                            </p>
+                        </div>                   
+                       
+                    </div>                    
+                </div>                 
+           
 
                 <div id="pictures-to-move">
                     ${projectsList.map((projectInfos) => {

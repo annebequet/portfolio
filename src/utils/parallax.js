@@ -2,15 +2,15 @@
 //import Rellax from "rellax";
 import Parallax from 'parallax-js'
 
-export const parallaxProjects = () => {    
-   const imgContainer = document.querySelector("#about-img-container");   
-    const parallaxInstance = new Parallax(imgContainer);
-
-    const projectArrowContainer = document.querySelector("#project-arrow"); 
-    const parallaxInstance1 = new Parallax(projectArrowContainer);
-}
-
-export const parallaxAbout = () => {    
-    const aboutContainer = document.querySelector("#about-container-parallax"); 
+export const parallax = () => {    
+    const aboutContainer = document.querySelector("#container-parallax"); 
     const parallaxInstance2 = new Parallax(aboutContainer);
+
+
+    const projectArrowContainer = document.querySelector("#parallax1"); 
+    const parallaxInstance1 = new Parallax(projectArrowContainer);
+
+    const mountainImgContainer = document.querySelector("#img-container-introduction"); 
+    const parallaxInstance3 = new Parallax(mountainImgContainer);
 }
+
