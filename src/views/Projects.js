@@ -31,16 +31,16 @@ export default class extends AbstractView {
             <div id="projects-container">
 
                 <div id="front-page-introduction">
-                    <div id="about-me">   
 
-                        <div id="about-introduction">
-                            <div>
-                                <h1>Hi, I'm Anne</h1>
-                                <p>Nice to meet you.</p>
-                                <p>I am a curious and creative front-end developer, feel free to check out my projects</p>
-                            </div>
+                    <div id="about-introduction">
+                        <div>
+                            <h1>Hi, I'm Anne</h1>
+                            <p>Nice to meet you.</p>
+                            <p>I am a curious and creative front-end developer</p>
                         </div>
-              
+                    </div>
+
+                    <div id="about-me">   
 
                         <div id="container-parallax">    
                             <div id="parallax1">            
@@ -61,8 +61,7 @@ export default class extends AbstractView {
                             <p id="text-line"> 
                                 Projects
                             </p>
-                        </div>                   
-                       
+                        </div>
                     </div>                    
                 </div>                 
            

@@ -38,8 +38,7 @@
       font-weight: bold;
       letter-spacing: 0.2em;
       text-decoration: none;
-      font-weight: lighter;        
-      position: relative;
+      font-weight: lighter; 
       color: gray;
 }
 
@@ -69,7 +68,7 @@
 }
 
 #skills-link a {
-    background: linear-gradient(white 0 100%) right / 0 no-repeat;
+    background: linear-gradient(white 0 100%) left / 0 no-repeat;
     color: black;
     opacity: var(--opacity);
     background-clip: text;
@@ -161,8 +160,8 @@
     margin: auto 0 !important;    
     justify-self: center;
     padding: 1em !important;
-    background-color: white;
     text-align: center;
+    background-color: black;
 }
 
 .about-section--title {
@@ -203,6 +202,16 @@
 
 /* Journey Template */
 
+
+#journey-text-container,
+#journey-timeline-container,
+#skills-right-container,
+#skills-left-container {   
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 3em;
+}
+
 #journey {
     top: var(--gap);
     display: flex;
@@ -212,11 +221,6 @@
     max-width: 1050px;
 }
 
-
-#journey-text-container { 
-    padding: 3em;  
-    background-color: aliceblue;
-}
 
 #journey-text-container h1 {
     font-weight: bold;
@@ -236,11 +240,6 @@
     margin-bottom: 1em;
 }
 
-
-#journey-timeline-container {  
-    padding: 3em;
-    background-color: aliceblue;
-}
 
 #journey-timeline-container h2{    
     text-transform: uppercase;
@@ -301,17 +300,6 @@
 }
 
 
-#skills-left-container { 
-    padding: 3em;   
-    background-color: ghostwhite;
-}
-
-#skills-right-container { 
-    padding: 3em;   
-    background-color: ghostwhite;
-}
-
-
 @media screen and (min-width: 500px) {
     #navbar-about {
         flex-direction: row;
@@ -360,34 +348,35 @@
 
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
-    #journey {
-        flex-direction: row-reverse;        
-        justify-content: space-around;
-    }
-
-    #journey-text-container,
-    #journey-timeline-container,
-    #skills-right-container,
-    #skills-left-container {   
-        background-color: white;
-    }
-    
-    #journey-timeline-container,
-    #skills-left-container {
-        margin-top: 5em;
-    }
-
+    #journey,
     #skills {
         flex-direction: row-reverse;        
         justify-content: space-around;
     }
+
     
+    #journey-timeline-container,
+    #skills-right-container {
+        margin-top: 5em;
+    }
+
+    
+    #journey-text-container,
+    #skills-left-container {
+        margin-bottom: 5em;
+    }
+
     #journey-text-container,
     #journey-timeline-container {   
         width: 50%;
     }
-
+    
+    #about-section-info {
+        background-color: transparent;
+    }
 }
+
+
 
 
 @media screen and (min-width: 990px) {   
@@ -404,10 +393,14 @@
     }
 
     #journey-text-container,
-    #journey-timeline-container,
-    #skills-right-container,
-    #skills-left-container {   
+    #journey-timeline-container {
         background-color: aliceblue;
+    }
+
+    
+    #skills-right-container,
+    #skills-left-container { 
+        background-color: ghostwhite;  
     }
     
     #journey-timeline-container,
@@ -428,9 +421,10 @@
         display: inline;
     }
 
-
+    #about-section-info {
+        background-color: transparent;
+    }
 }
-
 
 
 @-webkit-keyframes bg-slide {
