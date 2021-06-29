@@ -10,7 +10,6 @@
 
 #about-me { 
     margin: 3em auto 0;
-    width: 100%;
     padding: 1em;
     max-width: 1000px;
     display: flex;
@@ -32,7 +31,7 @@
 
 #about-introduction p {
     opacity: var(--opacity);
-    font-size: 1em;
+    font-size: var(--font-size-subtitle);
     margin: 0;
     z-index: 50;
     line-height: 1.3em;
@@ -195,20 +194,8 @@
         width: 110%;
     }
 
-    #about-me {
-        margin-top: 0;
-    }
-
     #about-introduction {
         margin-top: var(--gap);
-    }
-
-    #about-introduction h1{
-        font-size: 3em;
-    }
-
-    #about-introduction p{
-        font-size: 1.2em;
     }
 }
 
@@ -219,11 +206,6 @@
     #projects-container {    
         min-height: calc((55vw + 40vh));
     }
-
-    #about-introduction p{
-        font-size: 2em;
-    }
-
 }
 
 

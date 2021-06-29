@@ -32,7 +32,7 @@ body {
 }
 
 #nav a {
-    font-size: var(--font-size);
+    font-size: 1.2em;
 }
 
 #nav a::after {

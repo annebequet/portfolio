@@ -24,24 +24,31 @@ export default class extends AbstractView {
                 <img src= "${project.img}" alt="${project.name}" />
 
                 <div class="project__subcontainer">                
-                    <div class="project__top">
+                    <div class="project__left">
+                        <h2>${project.status}<h2>
+                        <p>${project.date}</p>
+                    </div>                    
+                    <div class="project__right>
                         <p class="project__description">${project.description}</p>
+                        <div>
                         <ul class="project__technologies">
                             ${project.technologies.map((techno) => `<li>[${techno}]</li>`).join('')}
                         </ul>
                     </div>
-
-                    <div class="project__links">
-                        <div class="project__links-subcontainer">
-                            <a class="nav__link" target="_blank" href="${project.link}">site</a>
-                        </div>
-
-                        <div class="project__links-subcontainer">
-                            <a class="nav__link" target="_blank" href="${project.git}">git</a>
-                        </div>                        
                     </div>
                 </div>
-            </div>
+
+                <div class="project__links">
+                    <a class="effect-button project-button" target="_blank" href="${project.link}">
+                        Site                            
+                        <span class="animation-button"></span>
+                    </a>
+                    <a class="effect-button project-button"  target="_blank" href="${project.git}">
+                        Git                            
+                        <span class="animation-button"></span>
+                    </a>          
+                </div>
+            </div>        
         `;
         else
         return `

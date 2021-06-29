@@ -22,134 +22,27 @@
     margin: auto;
     align-items: center;
     justify-content: center;
-    margin: var(--gap) 0;
-    margin-bottom: 6em;
+    margin: var(--gap) 0 6em;
 }
 
-.about-nav--link {
-    position: relative;
-    margin: 0 5em; 
-    padding: 0.5em 0;
-}
-
-.about-nav--link a {
-      cursor: pointer;
-      font-size: 1.5em;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-decoration: none;
-      font-weight: lighter; 
-      color: gray;
-}
-
-#journey-link {
-    text-align: center;
-}
-
-#journey-link a {
-    background: linear-gradient(white 0 100%) left / 0 no-repeat;
-    color: black;
-    opacity: var(--opacity);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: background-size 0.45s 0.04s;
-    font-size: 1.2em;
-    border: 1px solid #000;
-        border-top-color: rgb(0, 0, 0);
-        border-right-color: rgb(0, 0, 0);
-        border-bottom-color: rgb(0, 0, 0);
-        border-left-color: rgb(0, 0, 0);
-    padding: 0.3em 1em;
-}
-
-#skills-link {
-    text-align: center;
-    margin-top: 2em;
-}
-
-#skills-link a {
-    background: linear-gradient(white 0 100%) left / 0 no-repeat;
-    color: black;
-    opacity: var(--opacity);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: background-size 0.45s 0.04s;
-    font-size: 1.2em;
-    border: 1px solid #000;
-        border-top-color: rgb(0, 0, 0);
-        border-right-color: rgb(0, 0, 0);
-        border-bottom-color: rgb(0, 0, 0);
-        border-left-color: rgb(0, 0, 0);
-    padding: 0.3em 1em;
-}
-
-#journey-link::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: -2rem;
-    width: 0.25rem;
-    height: 100%;
-    transition: 0.6s;
-    background: black;
-    display: none;
-}
-
-#skills-link::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: -2rem;
-    width: 0.25rem;
-    height: 100%;
-    transition: 0.6s;
-    background: black;
-    z-index: -1;
-    display: none;
-}
-
-#journey-link a::before {
-    position: absolute;
-    content: attr(data-text);
-    z-index: -1;
-    color: black;
-    display: none;
-}
-
-#journey-link:hover::before{
-    /*left: calc(100% + 1rem);*/
-    width: calc(100% + 4rem);
-}
-
-#skills-link a::after {
-    position: absolute;
-    content: attr(data-text);
-    z-index: -1;
-    color: black;
-    right: 0;
-    display: none;
-}
-
-#skills-link:hover::after{
-    /*left: calc(100% + 1rem);*/
-    width: calc(100% + 4rem);
-}
-
-#journey-link a:hover {
-    background-color: black;
-    color: white;
-}
-
-#skills-link a:hover {
-    background-color: black;
-    color: white;
-}
-
+  
 .about-nav-link-active {
-    opacity: 1 !important;
-    font-weight: bold !important;
+    padding-right: 20px;
+    color: #fff !important;
+    padding-left: 20px;
 }
 
+.about-nav-link-active .animation-button {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+
+.about-nav-link:first-child {
+    margin-bottom: 1em;
+}
 
 
 /*section title */
@@ -161,7 +54,6 @@
     justify-self: center;
     padding: 1em !important;
     text-align: center;
-    background-color: black;
 }
 
 .about-section--title {
@@ -207,9 +99,8 @@
 #journey-timeline-container,
 #skills-right-container,
 #skills-left-container {   
-    background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 3em;
+    padding: 2em;
 }
 
 #journey {
@@ -217,7 +108,6 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color: white;
     max-width: 1050px;
 }
 
@@ -236,21 +126,29 @@
     letter-spacing: 0.1em;
     line-height: 1.7em;
     text-align: left;
-    font-size: 1em;
+    font-size: var(--font-size);
     margin-bottom: 1em;
 }
 
 
-#journey-timeline-container h2{    
+#journey-timeline-container h2,
+#hard-skills-container h2,
+#random-skills-container h2{    
     text-transform: uppercase;
     font-size: 1.2em;
     margin-bottom: 1em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 .work-experience {
     margin-bottom: 2em;
     font-size: 1em;
     line-height: 1.5em;
+}
+
+.work-experience:last-child {
+    margin-bottom: 0;
 }
 
 .work-time-frame {
@@ -278,7 +176,6 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
-    background-color: white;
 }
 
 #skills h3 {    
@@ -299,51 +196,11 @@
     display: inline;
 }
 
-
-@media screen and (min-width: 500px) {
-    #navbar-about {
-        flex-direction: row;
-    }
-    
-    #journey-link::before {
-        display: inline;
-    }
-
-    #journey-link a::before {
-        display: inline;
-    }
-
-    #skills-link::after {
-        display: inline;
-    }
-
-    #skills-link a::after {
-        display: inline;
-    }
-
-    #journey-link a {
-        color: transparent;
-        border: none;
-        opacity: 1;
-    }
-
-    #skills-link {
-        margin-top: 0;
-    }
-
-    #skills-link a {
-        color: transparent;
-        border: none;
-        opacity: 1;
-    }
-
-    #journey-link a:hover {
-        background-size: 100%;
-    }
-
-    #skills-link a:hover {
-        background-size: 100%;
-    }
+#journey-text-container,
+#journey-timeline-container,
+#skills-right-container,
+#skills-left-container {
+    background-color: white;
 }
 
 
@@ -381,15 +238,11 @@
 
 @media screen and (min-width: 990px) {   
     
-    #journey {
-        flex-direction: row-reverse;        
-        justify-content: space-around;
-    }
-
-    
+    #journey,
     #skills {
         flex-direction: row-reverse;        
         justify-content: space-around;
+        background-color: white;
     }
 
     #journey-text-container,
@@ -424,10 +277,14 @@
     #about-section-info {
         background-color: transparent;
     }
+
+    #navbar-about {
+        margin-top: 0em;
+    }
 }
 
 
-@-webkit-keyframes bg-slide {
+@-webkit-keyframes animation-button-slide {
     from { transform: translate(-100%, 100%); }
     to { transform: translate(0%, 0%); }
 }
@@ -446,7 +303,7 @@
     height: 25em;
     background-size: contain;
     background-repeat: repeat;
-    animation: bg-slide 3s linear;
+    animation: animation-button-slide 3s linear;
     position: absolute;
     bottom: 0;
     left: -100px;

@@ -48,10 +48,7 @@ export default class extends AbstractView {
                             2020
                         </p>
                         <p class="work-position">
-                            Fullstack developer training
-                        </p>
-                        <p class="work-technology">
-                            PHP / JS (ReactJS-Redux)
+                            Fullstack developer training PHP / JS (ReactJS-Redux)
                         </p>
                         <p class="work-technology">
                             Web Quality Exam (Opquast)

@@ -19,16 +19,14 @@ export default class extends AbstractView {
                </div>    
                
                 <navbar id="navbar-about">
-                    <p class="about-nav--link" id="journey-link"> 
-                        <a data-text="Journey" class=" about-nav-link-click about-nav-link-active">
-                            Journey
-                        </a>
-                    </p>
-                    <p class="about-nav--link" id="skills-link">
-                        <a data-text="Skills" class="about-nav-link-click">
-                            Skills
-                        </a>
-                    </p>
+                    <a class="about-nav-link about-nav-link-active effect-button">
+                        Journey                            
+                        <span class="animation-button"></span>
+                    </a>
+                    <a class="about-nav-link effect-button">
+                        Skills                            
+                        <span class="animation-button"></span>
+                    </a>
                 </navbar>
                
             </div>
