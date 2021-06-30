@@ -2,6 +2,7 @@ import AbstractView from "./AbstractView.js";
 
 import { getParamFromUrl } from "../helper/navigation.js";
 import { getProjectById } from "../helper/project.js";
+import { getIdNumber } from "../helper/project.js";
 
 export default class extends AbstractView {
     constructor(params) {
@@ -16,12 +17,16 @@ export default class extends AbstractView {
         if (project !== undefined)
         return `
             <div class="project">
+
                 <div class="project__header">
                     <h1>${project.name}</h1>
-                    <h3>${project.subtitle}</h3>                    
+                    <h3>${project.subtitle}</h3>  
+                    <p class="picture-id" id="project-id">
+                        ${getIdNumber(project.id)}
+                    </p>                  
                 </div>
 
-                <img src= "${project.img}" alt="${project.name}" />
+                <img src= "${project.img}" alt="${project.name}" />               
 
                 <div class="project__subcontainer">                
                     <div class="project__left">

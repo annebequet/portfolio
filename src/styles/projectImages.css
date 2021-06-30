@@ -69,6 +69,17 @@
     text-transform: uppercase;
 }
 
+.picture-id {
+    position: absolute;
+    right: 2px;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1em;
+    opacity: 1 !important;
+    bottom: 65px;
+}
+
 .opacity {
     opacity: 0.9 !important;
     transition: all 1s;

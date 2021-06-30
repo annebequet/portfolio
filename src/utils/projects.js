@@ -29,7 +29,7 @@ export const projectsAnimation = {
         // Then we can add the opacity className on those elements
         const pictureChildren = [...event.currentTarget.children];
         pictureChildren.forEach((child) => {  
-            document.querySelector(`#${child.id}`).classList.add(`opacity`);
+            document.querySelector('#' + child.id).classList.add(`opacity`);
         })
     },
 

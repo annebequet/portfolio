@@ -23,9 +23,25 @@
     letter-spacing: .015em;
     line-height: 1.2em;
     margin-bottom: 0.5em;
-    z-index: 50;
-    color: var(--color-title);
+    width: 10ch;
+    color: var(--color-title);    
+    animation: typing 2s steps(22), .3s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 
 #about-introduction p {
     opacity: var(--opacity);
@@ -50,11 +66,13 @@
 
 #text-line {
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 1em;
     font-weight: bold;
     text-align: center;
     position: relative;
 }
+
+
 
 /* Parallax section */
 
@@ -171,6 +189,13 @@
     width: 550px;
 }
 
+#project-id {
+    color: var(--color-title) !important;
+    float: left;
+    position: relative !important;
+    bottom: 0 !important;
+}
+
 @media screen and (min-width: 400px) {
     .square-div {   
         height: 5em;
@@ -201,6 +226,7 @@
         max-width: 100%;
     }
 }
+
 
 
 
