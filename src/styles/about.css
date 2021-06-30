@@ -99,12 +99,11 @@
 #journey-timeline-container,
 #skills-right-container,
 #skills-left-container {   
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 2em;
 }
 
 #journey {
-    top: var(--gap);
+    margin-top: var(--gap);
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -115,6 +114,7 @@
 #journey-text-container h1 {
     font-weight: bold;
     font-size: 1.5em;
+    color: var(--color-title);
 }
 
 #journey-text-container h2 {
@@ -139,6 +139,7 @@
     margin-bottom: 1em;
     font-weight: bold;
     letter-spacing: 0.1em;
+    color: var(--color-title);
 }
 
 .work-experience {
@@ -172,7 +173,7 @@
 /* Skills Template */
 
 #skills {    
-    top: var(--gap);
+    margin-top: var(--gap);
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
@@ -231,6 +232,14 @@
     #about-section-info {
         background-color: transparent;
     }
+
+    #journey-text-container,
+    #journey-timeline-container,
+    #skills-right-container,
+    #skills-left-container {   
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 2em;
+    }
 }
 
 
@@ -253,7 +262,7 @@
     
     #skills-right-container,
     #skills-left-container { 
-        background-color: ghostwhite;  
+        background-color: aliceblue;  
     }
     
     #journey-timeline-container,
@@ -280,6 +289,12 @@
 
     #navbar-about {
         margin-top: 0em;
+    }
+
+    #journey-timeline-container h2,
+    #hard-skills-container h2,
+    #random-skills-container h2 {
+        color: black;
     }
 }
 

@@ -6,7 +6,7 @@
     --title-font-size: 2em;
     --large-gap: 7em;
     --gap: 2em;
-    --secondary-color: rgb(147,112,219);
+    --color-title: rgb(44,48,140);
     --margin-top: 0em;
 }
 
@@ -50,10 +50,10 @@
     content: "";
     width: 100%;
     height: 2px;
-    background: var(--secondary-color);
+    background: var(--color-title);
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
 }
 
 /* button style */

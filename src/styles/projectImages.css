@@ -18,18 +18,19 @@
 
 
 #picture-container__1 {
-    top: 50em;
-    left: 40vw;
-    width: 60vw;
+    top: 350px;
+    right: 0;
+    width: 50%;
 }
 
 #picture-container__2 {  
-    left: 17vw;
-    width: 50vw;
+    top: 811px;
+    left: 15%;
+    width: 60%;
 }
 
 #picture-container__3 {
-    top: 73em;
+    top: 1200px;
     left: 3em;
     width: 20vw;
 }
@@ -55,7 +56,7 @@
 }
 
 .picture-container__informations a{
-    color: var(--secondary-color);
+    color: var(--color-title);
 }
 
 .picture-container__informations p{
@@ -65,6 +66,7 @@
 
 .picture-container__informations h3{
     margin: 0 0 5px 0;
+    text-transform: uppercase;
 }
 
 .opacity {

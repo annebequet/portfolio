@@ -36,7 +36,7 @@ export default class extends AbstractView {
                         <div>
                             <h1>Hi, I'm Anne</h1>
                             <p>Nice to meet you.</p>
-                            <p>I am a curious and creative front-end developer</p>
+                            <p>I'm a curious and creative front-end developer</p>
                         </div>
                     </div>
 

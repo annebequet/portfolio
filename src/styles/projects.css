@@ -24,8 +24,7 @@
     line-height: 1.2em;
     margin-bottom: 0.5em;
     z-index: 50;
-    border-left: 50px solid black;
-    padding-left: 1em;
+    color: var(--color-title);
 }
 
 #about-introduction p {
@@ -34,7 +33,6 @@
     margin: 0;
     z-index: 50;
     line-height: 1.3em;
-    letter-spacing: 0.2em;
 }
 
 #about-introduction {
@@ -223,12 +221,6 @@
 @media screen and (min-width: 990px) and (max-width: 1430px ) { 
     #parallax-img {
         width: 200%;
-    }
-
-    #about-introduction,
-    #about-me {
-        margin: var(--gap) 0 0 var(--gap);
-        width: 45%;
     }
 }
 
