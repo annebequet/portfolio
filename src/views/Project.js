@@ -18,23 +18,22 @@ export default class extends AbstractView {
             <div class="project">
                 <div class="project__header">
                     <h1>${project.name}</h1>
-                    <h3>${project.subtitle}</h3>
+                    <h3>${project.subtitle}</h3>                    
                 </div>
 
                 <img src= "${project.img}" alt="${project.name}" />
 
                 <div class="project__subcontainer">                
                     <div class="project__left">
-                        <h2>${project.status}<h2>
+                        <h2>${project.status}</h2>
                         <p>${project.date}</p>
-                    </div>                    
-                    <div class="project__right>
-                        <p class="project__description">${project.description}</p>
-                        <div>
+                        <h2 id="technologies-list-container">Technologies</h2>
                         <ul class="project__technologies">
                             ${project.technologies.map((techno) => `<li>[${techno}]</li>`).join('')}
                         </ul>
-                    </div>
+                    </div>                    
+                    <div class="project__right">
+                        <p class="project__description">${project.description}</p>
                     </div>
                 </div>
 
