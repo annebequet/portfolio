@@ -1,15 +1,14 @@
 #projects-container {    
-    margin: 0 var(--gap) 0;
+    margin: 0 var(--gap);
     padding-bottom: calc(var(--gap) *3);
     min-height: fit-content;
-    margin-top: 3em;
 }
 
 
 /* about presentation */
 
 #about-me { 
-    margin: 3em 0 3em;
+    margin: 3em 0;
     max-width: 500px;
     display: flex;
     position: relative;
@@ -52,7 +51,6 @@
 }
 
 #about-introduction {
-    padding: 2em 0;
     max-width: 500px;
 }
 
@@ -228,6 +226,11 @@
 }
 
 
+@media screen and (min-width: 700px) { 
+    #projects-container {
+        margin: 5em var(--gap) 0;
+    }
+}
 
 
 @media screen and (min-width: 990px) { 

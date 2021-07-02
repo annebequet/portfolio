@@ -11,7 +11,7 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <div class="picture-container" id="picture-container__${this.params.id}">
-                <img src= "${this.params.img}" alt="${this.params.name}" id="pictures-to-move__${this.params.id}" class="pictures-to-move__collection"/>
+                <img src= "${this.params.imgFrontPage}" alt="${this.params.name}" id="pictures-to-move__${this.params.id}" class="pictures-to-move__collection"/>
                 
                 <p class="picture-id" id="picture_${this.params.id}">${getIdNumber(this.params.id)}</p>
 

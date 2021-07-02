@@ -2,12 +2,10 @@ import AbstractView from "./AbstractView.js";
 
 import linkedin from "../assets/img/linkedin.png";
 import github from "../assets/img/github.png";
-import mountain1 from "../assets/img/mountain2.png";
 
 export default class extends AbstractView {
     constructor(params) {
         super(params);
-        this.setTitle("footer");
     }
 
     async getHtml() {
@@ -19,7 +17,7 @@ export default class extends AbstractView {
                 <div id="footer-middle-part">
                     <div>
                         <h2>Thank you -</h2>
-                        <p>If you like it, drop me a line, I would love to hear from you</p>
+                        <p>If you like it, drop me a line, I would love to hear from you!</p>
                     </div>
 
                     <div class="social-medias">

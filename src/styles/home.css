@@ -67,7 +67,8 @@ body {
         padding: 2em var(--gap) 0; 
         background: none;   
     }
+
     #app {
-        padding: 10em 0 0 0;
+        padding: 0;
     }
 }

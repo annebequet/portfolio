@@ -58,84 +58,85 @@
 
 /* button style */
 .effect-button {
-    text-decoration: none;    
-    font-size: 1em;
-    font-weight: lighter;
-    padding: 1em;  
-    position: relative;
-    text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 0.2em;
-    cursor: pointer;
-  }
+  text-decoration: none;    
+  font-size: 1em;
+  font-weight: lighter;
+  padding: 1em;  
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
   
-  .effect-button .animation-button {
-    background: #222;
-    height: 2px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -1px;
-    z-index: -1;
-  
-    -webkit-transition: all 0.3s;
-  
-    -o-transition: all 0.3s;
-  
-    transition: all 0.3s;
-  }
-  
-  .effect-button:hover {
-    padding-right: 20px;
-    color: #fff !important;
-    padding-left: 20px;
-  }
-  
-  .effect-button:hover .animation-button {
-    height: 100%;
-    width: 100%;
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-  }
-  
-  .effect-button .animation-button:before, .effect-button .animation-button:after {
-    content: '';
-    height: 2px;
-    width: 10px;
-    background: #222;
-    position: absolute;
-    right: -2px;      
-    -webkit-transition: all 0.3s;      
-    -o-transition: all 0.3s;      
-    transition: all 0.3s;
-  }
-  
-  .effect-button .animation-button:before {
-    bottom: 3px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .effect-button .animation-button:after{
-    top: 3px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  
-  .effect-button:hover .animation-button:before,
-  .effect-button:hover .animation-button:after{
-    right: 0;
-  }
-  
-  .effect-button:hover .animation-button:before{
-    bottom: 6px;
-  }
-  
-  .effect-button:hover .animation-button:after{
-    top: 6px;
-  }
+.effect-button .animation-button {
+  background: #222;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  z-index: -1;
+
+  -webkit-transition: all 0.3s;
+
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+}
+
+.effect-button:hover {
+  padding-right: 20px;
+  color: #fff !important;
+  padding-left: 20px;
+}
+
+.effect-button:hover .animation-button {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.effect-button .animation-button:before, .effect-button .animation-button:after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  background: #222;
+  position: absolute;
+  right: -2px;      
+  -webkit-transition: all 0.3s;      
+  -o-transition: all 0.3s;      
+  transition: all 0.3s;
+}
+
+.effect-button .animation-button:before {
+  bottom: 3px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.effect-button .animation-button:after{
+  top: 3px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.effect-button:hover .animation-button:before,
+.effect-button:hover .animation-button:after{
+  right: 0;
+}
+
+.effect-button:hover .animation-button:before{
+  bottom: 6px;
+}
+
+.effect-button:hover .animation-button:after{
+  top: 6px;
+}
 
 /* reset */
 

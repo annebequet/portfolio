@@ -18,21 +18,21 @@
 
 
 #picture-container__1 {
-    top: 350px;
-    right: 0;
+    top: 250px;
+    left: 600px;
     width: 50%;
 }
 
 #picture-container__2 {  
-    top: 811px;
-    left: 15%;
-    width: 60%;
+    top: 800px;
+    left: 3em;
+    width: 65%;
 }
 
 #picture-container__3 {
     top: 1200px;
     left: 3em;
-    width: 20vw;
+    width: 30vw;
 }
 
 
@@ -84,7 +84,7 @@
     opacity: 0.9 !important;
     transition: all 1s;
     -webkit-transition: all 1s;
-    filter: grayscale(80%) !important;
+    filter: grayscale(10%);
 }
 
 @media screen and (max-width: 990px) {   

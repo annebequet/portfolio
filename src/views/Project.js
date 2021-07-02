@@ -26,7 +26,23 @@ export default class extends AbstractView {
                     </p>                  
                 </div>
 
-                <img src= "${project.img}" alt="${project.name}" />               
+                <div 
+                    id="project-img__container"
+                    style="
+                        background-color:${project.imgDetailsBackgroundColor};
+                    "
+                >
+                    ${project.imgDetailsPage.map((img) => 
+                        `<img 
+                            src= "${img.image}" 
+                            alt="${project.name}" 
+                            style="
+                                height:${img.height};
+                                width:${img.width};
+                            "
+                        />`
+                    ).join('')}                               
+                </div>
 
                 <div class="project__subcontainer">                
                     <div class="project__left">
@@ -43,14 +59,16 @@ export default class extends AbstractView {
                 </div>
 
                 <div class="project__links">
-                    <a class="effect-button project-button" target="_blank" href="${project.link}">
-                        Site                            
-                        <span class="animation-button"></span>
-                    </a>
-                    <a class="effect-button project-button"  target="_blank" href="${project.git}">
-                        Git                            
-                        <span class="animation-button"></span>
-                    </a>          
+                    ${project.links.map((item) => 
+                        `<a 
+                            class="effect-button project-button" 
+                            target="_blank" 
+                            href="${item.link}"
+                        >
+                            ${item.name}                          
+                            <span class="animation-button"></span>
+                        </a>`
+                    ).join('')} 
                 </div>
             </div>        
         `;
